@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1KE-EA-HBz">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -79,7 +79,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5X-Yf-odN">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-tg-5U0">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-tg-5U0">
                                         <rect key="frame" x="115" y="22" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="2lu-1W-PPP"/>
@@ -218,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-Nu-At7">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-Nu-At7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="3203" y="916"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Eventos CollectionVC-->
         <scene sceneID="zrU-Wd-cCn">
             <objects>
-                <collectionViewController id="skq-yz-tOf" sceneMemberID="viewController">
+                <collectionViewController id="skq-yz-tOf" customClass="EventosCollectionVC" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UBX-XA-RaY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,7 +509,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mDy-Ba-tam">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="XwQ-dt-BOA">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XwQ-dt-BOA">
                                         <rect key="frame" x="115" y="22" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="T8j-Lv-rak"/>
@@ -651,7 +651,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qch-ww-Eic">
                                 <rect key="frame" x="0.0" y="64" width="320" height="1136"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo1" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-q5-NzN">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-q5-NzN">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="189" id="GHm-5c-30h"/>
@@ -709,25 +709,25 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5M5-W5-Fg4">
                                         <rect key="frame" x="169" y="488" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="jMJ-wZ-lUC"/>
                                             <constraint firstAttribute="height" constant="30" id="x7q-d1-KPk"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="coche-deportivo"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-bc-ld4">
                                         <rect key="frame" x="224" y="488" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="rTq-qG-XrU"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="autobus"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOd-kl-Uks">
                                         <rect key="frame" x="277" y="488" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="gbe-7e-SmQ"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="metro"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZONA PARKING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7f-AO-Nkt">
                                         <rect key="frame" x="28" y="536" width="117" height="21"/>
@@ -933,7 +933,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-6P-rET">
                                 <rect key="frame" x="0.0" y="64" width="320" height="986"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo1" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-BI-m2W">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-BI-m2W">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="189" id="gu4-MI-Uh2"/>
@@ -974,25 +974,25 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOU-Ye-uug">
                                         <rect key="frame" x="141" y="711" width="30" height="27"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="mCE-PX-tTs"/>
                                         </constraints>
-                                        <state key="normal" image="ubicacion-marca"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-Xx-baa">
                                         <rect key="frame" x="159" y="570" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="6FT-y7-vg1"/>
                                             <constraint firstAttribute="width" constant="30" id="zwi-xI-fGq"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="coche-deportivo"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reM-eJ-zpX">
                                         <rect key="frame" x="214" y="570" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="MzC-pj-yR3"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="autobus"/>
                                     </button>
                                     <textView clipsSubviews="YES" contentMode="scaleToFill" text="ACTIVIDADES QUE SE REALIZARAN..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-VR-lAw">
                                         <rect key="frame" x="20" y="415" width="277" height="130"/>
@@ -1033,10 +1033,10 @@
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-Uv-JsI">
                                         <rect key="frame" x="267" y="570" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="f0P-ge-UIw"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="metro"/>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ej0-kH-v0S">
                                         <rect key="frame" x="141" y="632" width="156" height="29"/>
@@ -1221,15 +1221,8 @@
     </scenes>
     <resources>
         <image name="ajustes" width="32" height="32"/>
-        <image name="autobus" width="65" height="65"/>
-        <image name="coche-deportivo" width="65" height="65"/>
         <image name="evento-de-eleccion-en-un-calendario-con-el-simbolo-de-estrella" width="32" height="32"/>
-        <image name="fondo1" width="649" height="333"/>
-        <image name="fondo2" width="720" height="540"/>
-        <image name="fotoUsuario" width="16" height="16"/>
         <image name="info" width="32" height="32"/>
-        <image name="metro" width="65" height="65"/>
         <image name="perfil" width="16" height="16"/>
-        <image name="ubicacion-marca" width="65" height="65"/>
     </resources>
 </document>
