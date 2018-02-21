@@ -15,6 +15,10 @@
 		FB88225C203D619D0094B9B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB88225B203D619D0094B9B2 /* main.m */; };
 		FB882266203D619D0094B9B2 /* Trip2BassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882265203D619D0094B9B2 /* Trip2BassTests.m */; };
 		FB882271203D619D0094B9B2 /* Trip2BassUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882270203D619D0094B9B2 /* Trip2BassUITests.m */; };
+		FB882280203D667D0094B9B2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB88227E203D667C0094B9B2 /* LoginViewController.m */; };
+		FB882283203D66BE0094B9B2 /* Eventos.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882281203D66BD0094B9B2 /* Eventos.m */; };
+		FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882285203D67110094B9B2 /* EventosCollectionVC.m */; };
+		FB882289203D67510094B9B2 /* AddEventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882288203D67510094B9B2 /* AddEventoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		FB88226C203D619D0094B9B2 /* Trip2BassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trip2BassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB882270203D619D0094B9B2 /* Trip2BassUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trip2BassUITests.m; sourceTree = "<group>"; };
 		FB882272203D619D0094B9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB88227E203D667C0094B9B2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../FreeAPPrtyIOS/FreeAPPrty/LoginViewController.m; sourceTree = "<group>"; };
+		FB88227F203D667C0094B9B2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../FreeAPPrtyIOS/FreeAPPrty/LoginViewController.h; sourceTree = "<group>"; };
+		FB882281203D66BD0094B9B2 /* Eventos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Eventos.m; path = ../../FreeAPPrtyIOS/FreeAPPrty/Eventos.m; sourceTree = "<group>"; };
+		FB882282203D66BE0094B9B2 /* Eventos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Eventos.h; path = ../../FreeAPPrtyIOS/FreeAPPrty/Eventos.h; sourceTree = "<group>"; };
+		FB882284203D67110094B9B2 /* EventosCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventosCollectionVC.h; sourceTree = "<group>"; };
+		FB882285203D67110094B9B2 /* EventosCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventosCollectionVC.m; sourceTree = "<group>"; };
+		FB882287203D67510094B9B2 /* AddEventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddEventoViewController.h; path = ../../FreeAPPrtyIOS/FreeAPPrty/AddEventoViewController.h; sourceTree = "<group>"; };
+		FB882288203D67510094B9B2 /* AddEventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddEventoViewController.m; path = ../../FreeAPPrtyIOS/FreeAPPrty/AddEventoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +118,18 @@
 				FB88224F203D619D0094B9B2 /* ViewController.h */,
 				FB882250203D619D0094B9B2 /* ViewController.m */,
 				FB882252203D619D0094B9B2 /* Main.storyboard */,
+				FB882287203D67510094B9B2 /* AddEventoViewController.h */,
+				FB882288203D67510094B9B2 /* AddEventoViewController.m */,
+				FB882282203D66BE0094B9B2 /* Eventos.h */,
+				FB882281203D66BD0094B9B2 /* Eventos.m */,
+				FB88227F203D667C0094B9B2 /* LoginViewController.h */,
+				FB88227E203D667C0094B9B2 /* LoginViewController.m */,
 				FB882255203D619D0094B9B2 /* Assets.xcassets */,
 				FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */,
 				FB88225A203D619D0094B9B2 /* Info.plist */,
 				FB88225B203D619D0094B9B2 /* main.m */,
+				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
+				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";
@@ -265,9 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB882280203D667D0094B9B2 /* LoginViewController.m in Sources */,
+				FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */,
 				FB882251203D619D0094B9B2 /* ViewController.m in Sources */,
 				FB88225C203D619D0094B9B2 /* main.m in Sources */,
 				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,
+				FB882289203D67510094B9B2 /* AddEventoViewController.m in Sources */,
+				FB882283203D66BE0094B9B2 /* Eventos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
