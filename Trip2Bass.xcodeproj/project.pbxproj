@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB88224D203D619D0094B9B2 /* AppDelegate.m */; };
+		FB882251203D619D0094B9B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882250203D619D0094B9B2 /* ViewController.m */; };
+		FB882254203D619D0094B9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB882252203D619D0094B9B2 /* Main.storyboard */; };
+		FB882256203D619D0094B9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB882255203D619D0094B9B2 /* Assets.xcassets */; };
+		FB882259203D619D0094B9B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */; };
+		FB88225C203D619D0094B9B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB88225B203D619D0094B9B2 /* main.m */; };
+		FB882266203D619D0094B9B2 /* Trip2BassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882265203D619D0094B9B2 /* Trip2BassTests.m */; };
+		FB882271203D619D0094B9B2 /* Trip2BassUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882270203D619D0094B9B2 /* Trip2BassUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB882262203D619D0094B9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB882241203D619D0094B9B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB882248203D619D0094B9B2;
+			remoteInfo = Trip2Bass;
+		};
+		FB88226D203D619D0094B9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB882241203D619D0094B9B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB882248203D619D0094B9B2;
+			remoteInfo = Trip2Bass;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB882249203D619D0094B9B2 /* Trip2Bass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trip2Bass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB88224C203D619D0094B9B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB88224D203D619D0094B9B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB88224F203D619D0094B9B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB882250203D619D0094B9B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB882253203D619D0094B9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB882255203D619D0094B9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB882258203D619D0094B9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB88225A203D619D0094B9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB88225B203D619D0094B9B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB882261203D619D0094B9B2 /* Trip2BassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trip2BassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB882265203D619D0094B9B2 /* Trip2BassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trip2BassTests.m; sourceTree = "<group>"; };
+		FB882267203D619D0094B9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB88226C203D619D0094B9B2 /* Trip2BassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trip2BassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB882270203D619D0094B9B2 /* Trip2BassUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trip2BassUITests.m; sourceTree = "<group>"; };
+		FB882272203D619D0094B9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB882246203D619D0094B9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB88225E203D619D0094B9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB882269203D619D0094B9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB882240203D619D0094B9B2 = {
+			isa = PBXGroup;
+			children = (
+				FB88224B203D619D0094B9B2 /* Trip2Bass */,
+				FB882264203D619D0094B9B2 /* Trip2BassTests */,
+				FB88226F203D619D0094B9B2 /* Trip2BassUITests */,
+				FB88224A203D619D0094B9B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB88224A203D619D0094B9B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB882249203D619D0094B9B2 /* Trip2Bass.app */,
+				FB882261203D619D0094B9B2 /* Trip2BassTests.xctest */,
+				FB88226C203D619D0094B9B2 /* Trip2BassUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB88224B203D619D0094B9B2 /* Trip2Bass */ = {
+			isa = PBXGroup;
+			children = (
+				FB88224C203D619D0094B9B2 /* AppDelegate.h */,
+				FB88224D203D619D0094B9B2 /* AppDelegate.m */,
+				FB88224F203D619D0094B9B2 /* ViewController.h */,
+				FB882250203D619D0094B9B2 /* ViewController.m */,
+				FB882252203D619D0094B9B2 /* Main.storyboard */,
+				FB882255203D619D0094B9B2 /* Assets.xcassets */,
+				FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */,
+				FB88225A203D619D0094B9B2 /* Info.plist */,
+				FB88225B203D619D0094B9B2 /* main.m */,
+			);
+			path = Trip2Bass;
+			sourceTree = "<group>";
+		};
+		FB882264203D619D0094B9B2 /* Trip2BassTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB882265203D619D0094B9B2 /* Trip2BassTests.m */,
+				FB882267203D619D0094B9B2 /* Info.plist */,
+			);
+			path = Trip2BassTests;
+			sourceTree = "<group>";
+		};
+		FB88226F203D619D0094B9B2 /* Trip2BassUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB882270203D619D0094B9B2 /* Trip2BassUITests.m */,
+				FB882272203D619D0094B9B2 /* Info.plist */,
+			);
+			path = Trip2BassUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB882248203D619D0094B9B2 /* Trip2Bass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB882275203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2Bass" */;
+			buildPhases = (
+				FB882245203D619D0094B9B2 /* Sources */,
+				FB882246203D619D0094B9B2 /* Frameworks */,
+				FB882247203D619D0094B9B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Trip2Bass;
+			productName = Trip2Bass;
+			productReference = FB882249203D619D0094B9B2 /* Trip2Bass.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB882260203D619D0094B9B2 /* Trip2BassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB882278203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2BassTests" */;
+			buildPhases = (
+				FB88225D203D619D0094B9B2 /* Sources */,
+				FB88225E203D619D0094B9B2 /* Frameworks */,
+				FB88225F203D619D0094B9B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB882263203D619D0094B9B2 /* PBXTargetDependency */,
+			);
+			name = Trip2BassTests;
+			productName = Trip2BassTests;
+			productReference = FB882261203D619D0094B9B2 /* Trip2BassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB88226B203D619D0094B9B2 /* Trip2BassUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB88227B203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2BassUITests" */;
+			buildPhases = (
+				FB882268203D619D0094B9B2 /* Sources */,
+				FB882269203D619D0094B9B2 /* Frameworks */,
+				FB88226A203D619D0094B9B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB88226E203D619D0094B9B2 /* PBXTargetDependency */,
+			);
+			name = Trip2BassUITests;
+			productName = Trip2BassUITests;
+			productReference = FB88226C203D619D0094B9B2 /* Trip2BassUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB882241203D619D0094B9B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Self;
+				TargetAttributes = {
+					FB882248203D619D0094B9B2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					FB882260203D619D0094B9B2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB882248203D619D0094B9B2;
+					};
+					FB88226B203D619D0094B9B2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB882248203D619D0094B9B2;
+					};
+				};
+			};
+			buildConfigurationList = FB882244203D619D0094B9B2 /* Build configuration list for PBXProject "Trip2Bass" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB882240203D619D0094B9B2;
+			productRefGroup = FB88224A203D619D0094B9B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB882248203D619D0094B9B2 /* Trip2Bass */,
+				FB882260203D619D0094B9B2 /* Trip2BassTests */,
+				FB88226B203D619D0094B9B2 /* Trip2BassUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB882247203D619D0094B9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB882259203D619D0094B9B2 /* LaunchScreen.storyboard in Resources */,
+				FB882256203D619D0094B9B2 /* Assets.xcassets in Resources */,
+				FB882254203D619D0094B9B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB88225F203D619D0094B9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB88226A203D619D0094B9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB882245203D619D0094B9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB882251203D619D0094B9B2 /* ViewController.m in Sources */,
+				FB88225C203D619D0094B9B2 /* main.m in Sources */,
+				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB88225D203D619D0094B9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB882266203D619D0094B9B2 /* Trip2BassTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB882268203D619D0094B9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB882271203D619D0094B9B2 /* Trip2BassUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB882263203D619D0094B9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB882248203D619D0094B9B2 /* Trip2Bass */;
+			targetProxy = FB882262203D619D0094B9B2 /* PBXContainerItemProxy */;
+		};
+		FB88226E203D619D0094B9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB882248203D619D0094B9B2 /* Trip2Bass */;
+			targetProxy = FB88226D203D619D0094B9B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB882252203D619D0094B9B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB882253203D619D0094B9B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB882258203D619D0094B9B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB882273203D619D0094B9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB882274203D619D0094B9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB882276203D619D0094B9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Trip2Bass/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2Bass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB882277203D619D0094B9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Trip2Bass/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2Bass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB882279203D619D0094B9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Trip2BassTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2BassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trip2Bass.app/Trip2Bass";
+			};
+			name = Debug;
+		};
+		FB88227A203D619D0094B9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Trip2BassTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2BassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trip2Bass.app/Trip2Bass";
+			};
+			name = Release;
+		};
+		FB88227C203D619D0094B9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Trip2BassUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2BassUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Trip2Bass;
+			};
+			name = Debug;
+		};
+		FB88227D203D619D0094B9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Trip2BassUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2BassUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Trip2Bass;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB882244203D619D0094B9B2 /* Build configuration list for PBXProject "Trip2Bass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB882273203D619D0094B9B2 /* Debug */,
+				FB882274203D619D0094B9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB882275203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2Bass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB882276203D619D0094B9B2 /* Debug */,
+				FB882277203D619D0094B9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB882278203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2BassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB882279203D619D0094B9B2 /* Debug */,
+				FB88227A203D619D0094B9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB88227B203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2BassUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB88227C203D619D0094B9B2 /* Debug */,
+				FB88227D203D619D0094B9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB882241203D619D0094B9B2 /* Project object */;
+}
