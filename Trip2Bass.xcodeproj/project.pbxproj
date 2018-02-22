@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB709129203EC9F500A68D5B /* AddUserViewController.m */; };
+		FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70912C203ED08600A68D5B /* ModUserViewController.m */; };
 		FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB88224D203D619D0094B9B2 /* AppDelegate.m */; };
-		FB882251203D619D0094B9B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882250203D619D0094B9B2 /* ViewController.m */; };
 		FB882254203D619D0094B9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB882252203D619D0094B9B2 /* Main.storyboard */; };
 		FB882256203D619D0094B9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB882255203D619D0094B9B2 /* Assets.xcassets */; };
 		FB882259203D619D0094B9B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */; };
@@ -39,11 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB709128203EC9F500A68D5B /* AddUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
+		FB709129203EC9F500A68D5B /* AddUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
+		FB70912B203ED08600A68D5B /* ModUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModUserViewController.h; sourceTree = "<group>"; };
+		FB70912C203ED08600A68D5B /* ModUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModUserViewController.m; sourceTree = "<group>"; };
 		FB882249203D619D0094B9B2 /* Trip2Bass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trip2Bass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB88224C203D619D0094B9B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB88224D203D619D0094B9B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB88224F203D619D0094B9B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB882250203D619D0094B9B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB882253203D619D0094B9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB882255203D619D0094B9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB882258203D619D0094B9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,8 +118,6 @@
 			children = (
 				FB88224C203D619D0094B9B2 /* AppDelegate.h */,
 				FB88224D203D619D0094B9B2 /* AppDelegate.m */,
-				FB88224F203D619D0094B9B2 /* ViewController.h */,
-				FB882250203D619D0094B9B2 /* ViewController.m */,
 				FB882252203D619D0094B9B2 /* Main.storyboard */,
 				FB882287203D67510094B9B2 /* AddEventoViewController.h */,
 				FB882288203D67510094B9B2 /* AddEventoViewController.m */,
@@ -130,6 +131,10 @@
 				FB88225B203D619D0094B9B2 /* main.m */,
 				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
 				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
+				FB709128203EC9F500A68D5B /* AddUserViewController.h */,
+				FB709129203EC9F500A68D5B /* AddUserViewController.m */,
+				FB70912B203ED08600A68D5B /* ModUserViewController.h */,
+				FB70912C203ED08600A68D5B /* ModUserViewController.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";
@@ -285,9 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */,
 				FB882280203D667D0094B9B2 /* LoginViewController.m in Sources */,
+				FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */,
 				FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */,
-				FB882251203D619D0094B9B2 /* ViewController.m in Sources */,
 				FB88225C203D619D0094B9B2 /* main.m in Sources */,
 				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,
 				FB882289203D67510094B9B2 /* AddEventoViewController.m in Sources */,
