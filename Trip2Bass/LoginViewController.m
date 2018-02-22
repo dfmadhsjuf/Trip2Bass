@@ -2,7 +2,7 @@
 //  LoginViewController.m
 //  Trip2Bass
 //
-//  Created by alumno on 21/2/18.
+//  Created by Alumno on 22/2/18.
 //  Copyright © 2018 Self. All rights reserved.
 //
 
@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //esconder teclado en username
+    [self.username resignFirstResponder] ;
+    
 }
 
 - (void)didReceiveMemoryWarning {
