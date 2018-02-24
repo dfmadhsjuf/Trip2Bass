@@ -18,8 +18,30 @@
     [super viewDidLoad];
     //hacer foto redonda
     self.fotoPerfil.layer.cornerRadius = self.fotoPerfil.frame.size.width /2;
+    self.bEnviarSolicitud.layer.cornerRadius = 10;
     self.fotoPerfil.clipsToBounds = YES;
+    //datepicker
+    UIDatePicker* datePicker = [[UIDatePicker alloc] init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.tfFechaNac setInputView: datePicker];
+    
+    
+    //[self.tfFechaNac resignFirstResponder];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void) datePickerValueChanged:(id)sender
+{
+    UIDatePicker *picker = (UIDatePicker*)self.tfFechaNac.inputView;
+    [picker setMaximumDate:[NSDate date]];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    NSDate *eventDate = picker.date;
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
+    
+    NSString *dateString = [dateFormat stringFromDate:eventDate];
+    self.tfFechaNac.text = [NSString stringWithFormat:@"%@",dateString];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,25 +50,33 @@
 }
 
 - (IBAction)edit:(id)sender {
-    UIColor* colorEdit = [UIColor colorWithRed:86.0f/255.0f
-                                         green:99.0f/255.0f
-                                          blue:111.0f/255.0f
-                                         alpha:1.0f];
+    //creamos array con todos los text fields
+    NSMutableArray* textFields = [[NSMutableArray alloc]initWithObjects:self.tfUsuario, self.tfNombre, self.tfApellidos, self.tfFechaNac,
+                                  self.tfCiudad, self.tfEmail, self.tfTelefono, self.tfMarca, self.tfModelo, self.tfColor, self.tfPlazas, nil];
+    //si el en el boton pone hecho....
+    if (([self.bEdit.title  isEqual: @"Save"])) {
+        //para cada elemento del array textfields ...
+        for (int i=0; i <[textFields count]; i++) {
+            //quitamos la interaccion del usuario
+            [textFields[i] setUserInteractionEnabled:NO];
+            //cambiamos el estilo del boton a ninguno
+            [textFields[i] setBorderStyle:UITextBorderStyleNone];
+        }
+        [self.scCoche setUserInteractionEnabled:NO];
+        //cambiamos el boton a edit
+        [self.bEdit setTitle:@"Edit"];
+    }else {
+        //cambiamos el titulo a Save
+        [self.bEdit setTitle:@"Save"];
+        //permitimos la edicion y cambiamos el estilo a los textfield y el segmented control
+        [self.scCoche setUserInteractionEnabled:YES];
+        for (int i = 0; i < [textFields count] ; i++) {
+            [textFields[i] setUserInteractionEnabled:YES];
+            [textFields[i] setBorderStyle:UITextBorderStyleRoundedRect];
+        }
+        
+    }
     
-    [self.tfUsuario setUserInteractionEnabled:YES];
-    [self.tfUsuario setBackgroundColor:colorEdit];
-    [self.tfNombre setUserInteractionEnabled:YES];
-    [self.tfNombre setBackgroundColor:colorEdit];
-    [self.tfApellidos setUserInteractionEnabled:YES];
-    [self.tfApellidos setBackgroundColor:colorEdit];
-    [self.tfCiudad setUserInteractionEnabled:YES];
-    [self.tfEmail setUserInteractionEnabled:YES];
-    [self.tfTelefono setUserInteractionEnabled:YES];
-    [self.tfMarca setUserInteractionEnabled:YES];
-    [self.tfModelo setUserInteractionEnabled:YES];
-    [self.tfColor setUserInteractionEnabled:YES];
-    [self.tfPlazas setUserInteractionEnabled:YES];
-    [self.bEdit setTitle:@"Hecho"];
 }
 
 
@@ -62,6 +92,26 @@
 
 - (IBAction)volverLogin:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)solicitarOrganizador:(id)sender {
+    //popup
+    [self.popup.layer setCornerRadius:5];
+    [self.view addSubview:self.popup];
+    [self.popup setCenter:self.view.center];
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        // animate it to the identity transform (100% scale)
+        self.view.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished){
+        // if you want to do something once the animation finishes, put it here
+    }];
+}
+
+- (IBAction)enviar:(id)sender {
+    //codigo enviar correo
+    
+    //cerramos popup
+    [self.popup removeFromSuperview];
+    
 }
 
 @end
