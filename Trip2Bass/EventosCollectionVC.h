@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class EventosDataController;
 
-@interface EventosCollectionVC : UICollectionViewController
+@interface EventosCollectionVC : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (strong, nonatomic) EventosDataController* dataController;
 
 @end

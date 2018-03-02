@@ -10,4 +10,12 @@
 
 @interface Eventos : NSObject
 
+//PROPIEDADES DE UN EVENTO
+@property NSString* nombre;
+@property NSString* tipo;
+@property NSString* area;
+@property NSString* fecha; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
+
+-(id)initWithName:(NSString*)nombre conTipo:(NSString*)tipo conArea:(NSString*)area yFecha:(NSString*)fecha;
+
 @end

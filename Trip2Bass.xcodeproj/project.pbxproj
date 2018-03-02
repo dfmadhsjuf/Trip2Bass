@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2581F7204949CD007837C0 /* Eventos.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2581F6204949CD007837C0 /* Eventos.m */; };
+		FB2581FA20494A25007837C0 /* EventosDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2581F920494A25007837C0 /* EventosDataController.m */; };
 		FB4986732049491E005D71B9 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4986722049491E005D71B9 /* AddEventViewController.m */; };
 		FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB709129203EC9F500A68D5B /* AddUserViewController.m */; };
 		FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70912C203ED08600A68D5B /* ModUserViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2581F5204949CC007837C0 /* Eventos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eventos.h; sourceTree = "<group>"; };
+		FB2581F6204949CD007837C0 /* Eventos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eventos.m; sourceTree = "<group>"; };
+		FB2581F820494A25007837C0 /* EventosDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventosDataController.h; sourceTree = "<group>"; };
+		FB2581F920494A25007837C0 /* EventosDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventosDataController.m; sourceTree = "<group>"; };
 		FB4986712049491E005D71B9 /* AddEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
 		FB4986722049491E005D71B9 /* AddEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		FB709128203EC9F500A68D5B /* AddUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
@@ -130,6 +136,10 @@
 				FB8F447F203F7EA900AA416C /* LoginViewController.m */,
 				FB4986712049491E005D71B9 /* AddEventViewController.h */,
 				FB4986722049491E005D71B9 /* AddEventViewController.m */,
+				FB2581F5204949CC007837C0 /* Eventos.h */,
+				FB2581F6204949CD007837C0 /* Eventos.m */,
+				FB2581F820494A25007837C0 /* EventosDataController.h */,
+				FB2581F920494A25007837C0 /* EventosDataController.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";
@@ -285,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2581F7204949CD007837C0 /* Eventos.m in Sources */,
 				FB8F4480203F7EA900AA416C /* LoginViewController.m in Sources */,
+				FB2581FA20494A25007837C0 /* EventosDataController.m in Sources */,
 				FB4986732049491E005D71B9 /* AddEventViewController.m in Sources */,
 				FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */,
 				FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */,

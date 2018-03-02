@@ -7,6 +7,8 @@
 //
 
 #import "EventosCollectionVC.h"
+#import "Eventos.h"
+#import "EventosDataController.h"
 
 @interface EventosCollectionVC ()
 
@@ -33,6 +35,11 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.dataController = [[EventosDataController alloc] init];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -46,20 +53,31 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return [self.dataController countOfList];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    //Creamos la celda a partir del identificador de celda de nuestra vista de Eventos.
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"eventoCell" forIndexPath:indexPath];
+    //Nos creamos un evento a partir del evento que este en esa posicion de la lista.
+    Eventos* eventoAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    //Añadimos la informacion del evento a los labels de la celda.
+    UILabel* tituloLabel = (UILabel*) [cell viewWithTag:1];
+    tituloLabel.text = eventoAtIndex.nombre;
     
-    // Configure the cell
+    UILabel* tipoLabel = (UILabel*) [cell viewWithTag:1];
+    tipoLabel.text = eventoAtIndex.tipo;
+    
+    UILabel* areaLabel = (UILabel*) [cell viewWithTag:3];
+    areaLabel.text = eventoAtIndex.area;
+    
+    UILabel* fechaLabel = (UILabel*) [cell viewWithTag:4];
+    fechaLabel.text = eventoAtIndex.fecha;
     
     return cell;
 }
