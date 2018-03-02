@@ -36,5 +36,6 @@
 //POPUP
 @property (strong, nonatomic) IBOutlet UIView *popup;
 @property (weak, nonatomic) IBOutlet UIButton *bEnviarSolicitud;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @end

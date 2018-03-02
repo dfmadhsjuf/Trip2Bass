@@ -94,6 +94,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)solicitarOrganizador:(id)sender {
+    //deshabilitamos scroll y boton
+    [self.scroll setUserInteractionEnabled:NO];
+    [self.bEdit setEnabled:NO];
     //popup
     [self.popup.layer setCornerRadius:5];
     [self.view addSubview:self.popup];
@@ -108,6 +111,10 @@
 
 - (IBAction)enviar:(id)sender {
     //codigo enviar correo
+    
+    //deshabilitamos scroll y boton
+    [self.scroll setUserInteractionEnabled:YES];
+    [self.bEdit setEnabled:YES];
     
     //cerramos popup
     [self.popup removeFromSuperview];

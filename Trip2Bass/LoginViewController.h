@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *username;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *password;
+@property (weak, nonatomic) IBOutlet UITextField *tfUsername;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet UILabel *lRecordarUsuario;
+@property (weak, nonatomic) IBOutlet UISwitch *swRecordarUsuario;
+
+
+//BOTONES
+@property (weak, nonatomic) IBOutlet UIButton *bSignIn;
+@property (weak, nonatomic) IBOutlet UIButton *bSignUp;
+@property (weak, nonatomic) IBOutlet UIButton *bLogin;
+
 
 @end

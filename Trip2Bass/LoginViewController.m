@@ -16,14 +16,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //diseño boton Sign IN
+    [self.bSignIn.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.bSignIn.layer setBorderWidth:2.5];
+    [self.bSignIn.layer setCornerRadius:15];
+    
+    //diseño boton Sign UP
+    [self.bSignUp.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.bSignUp.layer setBorderWidth:2.5];
+    [self.bSignUp.layer setCornerRadius:15];
+    
+    //diseño boton LOG IN
+    [self.bSignUp.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.bSignUp.layer setBorderWidth:2.5];
+    [self.bSignUp.layer setCornerRadius:15];
+    
+    
     //esconder teclado en username
-    [self.username resignFirstResponder] ;
+    [self.tfUsername becomeFirstResponder];
+    [self.tfUsername resignFirstResponder] ;
+    
+    
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+- (IBAction)SignIn:(id)sender {
+    [self.bSignIn setHidden:YES];
+    [self.bSignUp setHidden:YES];
+    [self.tfUsername setHidden:NO];
+    [self.tfPassword setHidden:NO];
+    [self.lRecordarUsuario setHidden:NO];
+    [self.swRecordarUsuario setHidden:NO];
+    [self.bLogin setHidden:NO];
+    
+    [self.tfUsername setUserInteractionEnabled:YES];
+    [self.tfPassword setUserInteractionEnabled:YES];
+    [self.swRecordarUsuario setUserInteractionEnabled:YES];
+    [self.bLogin setUserInteractionEnabled:YES];
 }
 
 /*

@@ -1,39 +1,28 @@
 //
-//  AddUserViewController.m
+//  AddEventViewController.m
 //  Trip2Bass
 //
-//  Created by alumno on 22/2/18.
+//  Created by alumno on 2/3/18.
 //  Copyright © 2018 Self. All rights reserved.
 //
 
-#import "AddUserViewController.h"
+#import "AddEventViewController.h"
 
-@interface AddUserViewController ()
+@interface AddEventViewController ()
 
 @end
 
-@implementation AddUserViewController
+@implementation AddEventViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //hacer foto redonda
-    self.fotoPerfil.layer.cornerRadius = self.fotoPerfil.frame.size.width /2;
-    
-    //mostrar teclado
-    [self.tfNombre resignFirstResponder];
-    
-  
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)esconderTeclado:(id)sender {
-    [self.tfNombre becomeFirstResponder];
-}
-
 
 /*
 #pragma mark - Navigation
@@ -44,6 +33,28 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//ACCION BOTON ENVIAR
+- (IBAction)invitar:(id)sender {
+    //popup
+    [self.popup.layer setCornerRadius:5];
+    [self.view addSubview:self.popup];
+    [self.popup setCenter:self.view.center];
+}
+
+//ACCION BOTON ENVIAR POPUP
+- (IBAction)enviarInvitaciones:(id)sender {
+    
+    //habilitamos scroll y boton
+    [self.scroll setUserInteractionEnabled:YES];
+    [self.bCreate setEnabled:YES];
+    [self.bCancel setEnabled:YES];
+    //eliminamos el popup
+    [self.popup removeFromSuperview];
+}
+- (IBAction)seleccionarUsuario:(id)sender {
+    
+}
 
 - (IBAction)cancel:(UIStoryboard*)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

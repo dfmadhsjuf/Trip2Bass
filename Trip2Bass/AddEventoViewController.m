@@ -2,7 +2,7 @@
 //  AddEventoViewController.m
 //  Trip2Bass
 //
-//  Created by alumno on 21/2/18.
+//  Created by alumno on 2/3/18.
 //  Copyright © 2018 Self. All rights reserved.
 //
 
@@ -22,6 +22,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)invitarUsuarios:(id)sender {
+   
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        // animate it to the identity transform (100% scale)
+        self.view.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished){
 }
 
 /*
