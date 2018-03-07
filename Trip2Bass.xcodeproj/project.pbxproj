@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FB2581F7204949CD007837C0 /* Eventos.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2581F6204949CD007837C0 /* Eventos.m */; };
 		FB2581FA20494A25007837C0 /* EventosDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2581F920494A25007837C0 /* EventosDataController.m */; };
+		FB3840A2204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3840A1204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m */; };
+		FB3840A5204FE08600471ADB /* InformacionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3840A4204FE08600471ADB /* InformacionDataController.m */; };
+		FB3840A8204FE17000471ADB /* Informacion.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3840A7204FE17000471ADB /* Informacion.m */; };
 		FB4986732049491E005D71B9 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4986722049491E005D71B9 /* AddEventViewController.m */; };
 		FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB709129203EC9F500A68D5B /* AddUserViewController.m */; };
 		FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70912C203ED08600A68D5B /* ModUserViewController.m */; };
@@ -45,6 +48,12 @@
 		FB2581F6204949CD007837C0 /* Eventos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eventos.m; sourceTree = "<group>"; };
 		FB2581F820494A25007837C0 /* EventosDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventosDataController.h; sourceTree = "<group>"; };
 		FB2581F920494A25007837C0 /* EventosDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventosDataController.m; sourceTree = "<group>"; };
+		FB3840A0204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformacionCollectionViewCollectionViewController.h; sourceTree = "<group>"; };
+		FB3840A1204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformacionCollectionViewCollectionViewController.m; sourceTree = "<group>"; };
+		FB3840A3204FE08600471ADB /* InformacionDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformacionDataController.h; sourceTree = "<group>"; };
+		FB3840A4204FE08600471ADB /* InformacionDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformacionDataController.m; sourceTree = "<group>"; };
+		FB3840A6204FE17000471ADB /* Informacion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Informacion.h; sourceTree = "<group>"; };
+		FB3840A7204FE17000471ADB /* Informacion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Informacion.m; sourceTree = "<group>"; };
 		FB4986712049491E005D71B9 /* AddEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
 		FB4986722049491E005D71B9 /* AddEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		FB709128203EC9F500A68D5B /* AddUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
@@ -126,8 +135,6 @@
 				FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */,
 				FB88225A203D619D0094B9B2 /* Info.plist */,
 				FB88225B203D619D0094B9B2 /* main.m */,
-				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
-				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
 				FB709128203EC9F500A68D5B /* AddUserViewController.h */,
 				FB709129203EC9F500A68D5B /* AddUserViewController.m */,
 				FB70912B203ED08600A68D5B /* ModUserViewController.h */,
@@ -138,8 +145,16 @@
 				FB4986722049491E005D71B9 /* AddEventViewController.m */,
 				FB2581F5204949CC007837C0 /* Eventos.h */,
 				FB2581F6204949CD007837C0 /* Eventos.m */,
+				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
+				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
 				FB2581F820494A25007837C0 /* EventosDataController.h */,
 				FB2581F920494A25007837C0 /* EventosDataController.m */,
+				FB3840A0204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.h */,
+				FB3840A1204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m */,
+				FB3840A3204FE08600471ADB /* InformacionDataController.h */,
+				FB3840A4204FE08600471ADB /* InformacionDataController.m */,
+				FB3840A6204FE17000471ADB /* Informacion.h */,
+				FB3840A7204FE17000471ADB /* Informacion.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";
@@ -300,8 +315,11 @@
 				FB2581FA20494A25007837C0 /* EventosDataController.m in Sources */,
 				FB4986732049491E005D71B9 /* AddEventViewController.m in Sources */,
 				FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */,
+				FB3840A5204FE08600471ADB /* InformacionDataController.m in Sources */,
+				FB3840A2204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m in Sources */,
 				FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */,
 				FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */,
+				FB3840A8204FE17000471ADB /* Informacion.m in Sources */,
 				FB88225C203D619D0094B9B2 /* main.m in Sources */,
 				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,
 			);
