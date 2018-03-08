@@ -26,6 +26,19 @@
     [self addEvento:evento];
     evento = [[Eventos alloc] initWithName:@"Fiesta2" conTipo:@"Fiesta" conArea:@"BCN" yFecha:@"15/03/2018"];
     [self addEvento:evento];
+    evento = [[Eventos alloc]initWithName:@"Quedada2" conTipo:@"Quedada" conArea:@"VLC" yFecha:@"15/06/2018"];
+    [self addEvento:evento];
+    evento = [[Eventos alloc] initWithName:@"Fiesta3" conTipo:@"Fiesta" conArea:@"BCN" yFecha:@"15/03/2018"];
+    [self addEvento:evento];
+    //Segun el tipo de evento le asociamos una foto u otra
+    for (int i = 0; i < [self.masterEventosList count]; i++) {
+        Eventos* ev = [self objectInListAtIndex:i];
+        if ([ev.tipo isEqualToString:@"Fiesta"]) {
+            [ev setFoto:@"fondo_evento1"];
+        }else{
+            [ev setFoto:@"fondo_evento2"];
+        }
+    }
 }
 
 - (void)setMasterMemeList:(NSMutableArray *)newList {

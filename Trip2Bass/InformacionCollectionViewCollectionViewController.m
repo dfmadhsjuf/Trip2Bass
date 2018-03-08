@@ -86,8 +86,8 @@ float randomRed,randomGreen,randomBlue;
     randomBlue = arc4random() % 255;
     //asignamos color de fondo aleatorio
     [cell setBackgroundColor:[UIColor colorWithRed:randomRed/255.0 green:randomGreen/255.0 blue:randomBlue/255.0 alpha:0.5]];
-    cell.contentView.layer.cornerRadius = 5;
-    cell.contentView.layer.masksToBounds = YES;
+    [cell.layer setCornerRadius:10];
+    cell.layer.masksToBounds = YES;
     return cell;
 }
 

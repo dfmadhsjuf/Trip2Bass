@@ -15,6 +15,7 @@
 @property NSString* tipo;
 @property NSString* area;
 @property NSString* fecha; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
+@property NSString* foto;
 
 -(id)initWithName:(NSString*)nombre conTipo:(NSString*)tipo conArea:(NSString*)area yFecha:(NSString*)fecha;
 

@@ -11,6 +11,7 @@
 #import "EventosDataController.h"
 
 @interface EventosCollectionVC ()
+@property (strong, nonatomic) IBOutlet UICollectionView *cv_misEventos;
 
 @end
 
@@ -70,7 +71,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UILabel* tituloLabel = (UILabel*) [cell viewWithTag:1];
     tituloLabel.text = eventoAtIndex.nombre;
     
-    UILabel* tipoLabel = (UILabel*) [cell viewWithTag:1];
+    UILabel* tipoLabel = (UILabel*) [cell viewWithTag:2];
     tipoLabel.text = eventoAtIndex.tipo;
     
     UILabel* areaLabel = (UILabel*) [cell viewWithTag:3];
@@ -78,6 +79,19 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UILabel* fechaLabel = (UILabel*) [cell viewWithTag:4];
     fechaLabel.text = eventoAtIndex.fecha;
+    
+    //foto de fondo
+    UIImageView* fondo = [(UIImageView*) cell viewWithTag:5];
+    UIImage *foto = [[UIImage alloc]init];
+    foto = [UIImage imageNamed:eventoAtIndex.foto];
+    [fondo setImage:foto];
+    
+    //border redondos
+    [cell.layer setCornerRadius:10];
+    cell.layer.masksToBounds = YES;
+    
+    //margen celdas
+    self.cv_misEventos.contentInset = UIEdgeInsetsMake(15, 0, 0, 0);
     
     return cell;
 }
