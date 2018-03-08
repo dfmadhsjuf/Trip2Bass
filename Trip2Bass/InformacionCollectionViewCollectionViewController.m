@@ -7,6 +7,8 @@
 //
 
 #import "InformacionCollectionViewCollectionViewController.h"
+#import "Informacion.h"
+#import "InformacionDataController.h"
 
 @interface InformacionCollectionViewCollectionViewController ()
 
@@ -15,6 +17,8 @@
 @implementation InformacionCollectionViewCollectionViewController
 
 static NSString * const reuseIdentifier = @"InfoCell";
+float randomRed,randomGreen,randomBlue;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,36 +36,61 @@ static NSString * const reuseIdentifier = @"InfoCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.dataController = [[InformacionDataController alloc]init];
 }
-*/
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return [self.dataController countOfList];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    //Creamos la celda a partir del identificador de celda de nuestra vista de Eventos.
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellInfo" forIndexPath:indexPath];
+    //Nos creamos un evento a partir del evento que este en esa posicion de la lista.
+    Informacion* infoAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    //Añadimos la informacion del evento a los labels de la celda.
+    UILabel* autorLabel = (UILabel*) [cell viewWithTag:1];
+    autorLabel.text = infoAtIndex.autor;
     
-    // Configure the cell
+    UILabel* fechaLabel = (UILabel*) [cell viewWithTag:2];
+    fechaLabel.text = infoAtIndex.fechaPublicacion;
     
+    UILabel* tituloLabel = (UILabel*) [cell viewWithTag:3];
+    tituloLabel.text = infoAtIndex.tituloInfo;
+    
+    UILabel* contenidoLabel = (UILabel*) [cell viewWithTag:4];
+    contenidoLabel.text = infoAtIndex.contenidoInfo;
+    
+    //damos valor aleatorio a randomRed, randomGreen, randomBlue
+    randomRed = arc4random() % 255;
+    randomGreen = arc4random() % 255;
+    randomBlue = arc4random() % 255;
+    //asignamos color de fondo aleatorio
+    [cell setBackgroundColor:[UIColor colorWithRed:randomRed/255.0 green:randomGreen/255.0 blue:randomBlue/255.0 alpha:0.5]];
+    cell.contentView.layer.cornerRadius = 5;
+    cell.contentView.layer.masksToBounds = YES;
     return cell;
 }
+
 
 #pragma mark <UICollectionViewDelegate>
 

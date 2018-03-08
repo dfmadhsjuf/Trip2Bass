@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Informacion.h"
+
+
+@class Informacion;
 
 @interface InformacionDataController : NSObject
 
+@property (nonatomic, copy) NSMutableArray* masterInformacionList;
+
 -(NSUInteger) countOfList;
 -(Informacion*) objectInListAtIndex:(NSUInteger)theIndex;
--(void) addEvento:(Informacion*) evento;
+-(void) addInformacion:(Informacion*) informacion;
 
 @end

@@ -16,6 +16,7 @@
 @property NSString* autor;
 @property NSString* fechaPublicacion;
 
+//CONSTRUCTOR
 -(id)initWithTitulo:(NSString*)tituloInfo conContenido:(NSString*)contenido conFecha:(NSString*)fechaPublicacion yConAutor:(NSString*)autor;
 
 @end
