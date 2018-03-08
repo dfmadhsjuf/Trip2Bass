@@ -10,6 +10,8 @@
 
 @interface ModUserViewController ()
 
+
+
 @end
 
 @implementation ModUserViewController
@@ -20,11 +22,17 @@
     self.fotoPerfil.layer.cornerRadius = self.fotoPerfil.frame.size.width /2;
     self.bEnviarSolicitud.layer.cornerRadius = 10;
     self.fotoPerfil.clipsToBounds = YES;
+    
+    self.scrollDatos.layer.cornerRadius = 10;
+    self.scrollDatos.clipsToBounds = YES;
     //datepicker
     UIDatePicker* datePicker = [[UIDatePicker alloc] init];
     datePicker.datePickerMode = UIDatePickerModeDate;
     [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.tfFechaNac setInputView: datePicker];
+    
+    //creamos array con todos los text fields
+    
     
     
     //[self.tfFechaNac resignFirstResponder];
@@ -50,7 +58,6 @@
 }
 
 - (IBAction)edit:(id)sender {
-    //creamos array con todos los text fields
     NSMutableArray* textFields = [[NSMutableArray alloc]initWithObjects:self.tfUsuario, self.tfNombre, self.tfApellidos, self.tfFechaNac,
                                   self.tfCiudad, self.tfEmail, self.tfTelefono, self.tfMarca, self.tfModelo, self.tfColor, self.tfPlazas, nil];
     //si el en el boton pone hecho....
@@ -63,6 +70,7 @@
             [textFields[i] setBorderStyle:UITextBorderStyleNone];
         }
         [self.scCoche setUserInteractionEnabled:NO];
+        [self.bSeleccionarImagen setUserInteractionEnabled:YES];
         //cambiamos el boton a edit
         [self.bEdit setTitle:@"Edit"];
     }else {
@@ -109,6 +117,7 @@
     }];
 }
 
+//ENVIAR SOLICITUD ORGANIZADOR
 - (IBAction)enviar:(id)sender {
     //codigo enviar correo
     
@@ -121,4 +130,20 @@
     
 }
 
+//SELECIONAR IMAGEN DE GALERIA
+- (IBAction) pickImage:(id)sender{
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+         didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo{
+    
+    self.fotoPerfil.image = image;
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"Dismiss completed");;
+    }];
+}
 @end

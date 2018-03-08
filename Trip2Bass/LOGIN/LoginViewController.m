@@ -18,18 +18,13 @@
     [super viewDidLoad];
     
     //diseño boton Sign IN
-    [self.bSignIn.layer setBorderColor:[[UIColor whiteColor] CGColor]];
-    [self.bSignIn.layer setBorderWidth:2.5];
+    [self.bSignIn.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.bSignIn.layer setBorderWidth:1.5];
     [self.bSignIn.layer setCornerRadius:15];
     
     //diseño boton Sign UP
-    [self.bSignUp.layer setBorderColor:[[UIColor whiteColor] CGColor]];
-    [self.bSignUp.layer setBorderWidth:2.5];
-    [self.bSignUp.layer setCornerRadius:15];
-    
-    //diseño boton LOG IN
-    [self.bSignUp.layer setBorderColor:[[UIColor whiteColor] CGColor]];
-    [self.bSignUp.layer setBorderWidth:2.5];
+    [self.bSignUp.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.bSignUp.layer setBorderWidth:1.5];
     [self.bSignUp.layer setCornerRadius:15];
     
     
@@ -49,18 +44,17 @@
 
 
 - (IBAction)SignIn:(id)sender {
-    [self.bSignIn setHidden:YES];
-    [self.bSignUp setHidden:YES];
-    [self.tfUsername setHidden:NO];
-    [self.tfPassword setHidden:NO];
-    [self.lRecordarUsuario setHidden:NO];
-    [self.swRecordarUsuario setHidden:NO];
-    [self.bLogin setHidden:NO];
+    if ([self.tfUsername isHidden]) {
+        [self.tfUsername setHidden:NO];
+        [self.tfPassword setHidden:NO];
+        [self.lRecordarUsuario setHidden:NO];
+        [self.swRecordarUsuario setHidden:NO];
+        [self.tfUsername setUserInteractionEnabled:YES];
+        [self.tfPassword setUserInteractionEnabled:YES];
+        [self.swRecordarUsuario setUserInteractionEnabled:YES];
+    } 
     
-    [self.tfUsername setUserInteractionEnabled:YES];
-    [self.tfPassword setUserInteractionEnabled:YES];
-    [self.swRecordarUsuario setUserInteractionEnabled:YES];
-    [self.bLogin setUserInteractionEnabled:YES];
+   
 }
 
 /*

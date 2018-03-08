@@ -16,8 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //hacer foto redonda
+    
+    //hacer scroll y foto redonda
     self.fotoPerfil.layer.cornerRadius = self.fotoPerfil.frame.size.width /2;
+    self.fotoPerfil.clipsToBounds = YES;
+    self.scroll.layer.cornerRadius = 10;
     
     //mostrar teclado
     [self.tfNombre resignFirstResponder];
@@ -30,9 +33,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)esconderTeclado:(id)sender {
-    [self.tfNombre becomeFirstResponder];
+-(IBAction)pickImage:(id)sender{
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
 }
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+         didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo{
+    
+    self.fotoPerfil.image = image;
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"Dismiss completed");;
+    }];
+ }
+
 
 
 /*
@@ -53,5 +69,7 @@
     //code for create user
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+     
+     
 
 @end

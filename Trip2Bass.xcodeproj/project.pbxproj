@@ -105,6 +105,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB6A47042051A61000E75AF1 /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				FB8F447E203F7EA900AA416C /* LoginViewController.h */,
+				FB8F447F203F7EA900AA416C /* LoginViewController.m */,
+			);
+			path = LOGIN;
+			sourceTree = "<group>";
+		};
+		FB6A47052051A63500E75AF1 /* INFORMACION */ = {
+			isa = PBXGroup;
+			children = (
+				FB3840A0204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.h */,
+				FB3840A1204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m */,
+				FB3840A3204FE08600471ADB /* InformacionDataController.h */,
+				FB3840A4204FE08600471ADB /* InformacionDataController.m */,
+				FB3840A6204FE17000471ADB /* Informacion.h */,
+				FB3840A7204FE17000471ADB /* Informacion.m */,
+			);
+			path = INFORMACION;
+			sourceTree = "<group>";
+		};
+		FB6A47062051A63800E75AF1 /* EVENTOS */ = {
+			isa = PBXGroup;
+			children = (
+				FB4986712049491E005D71B9 /* AddEventViewController.h */,
+				FB4986722049491E005D71B9 /* AddEventViewController.m */,
+				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
+				FB2581F6204949CD007837C0 /* Eventos.m */,
+				FB2581F5204949CC007837C0 /* Eventos.h */,
+				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
+				FB2581F820494A25007837C0 /* EventosDataController.h */,
+				FB2581F920494A25007837C0 /* EventosDataController.m */,
+			);
+			path = EVENTOS;
+			sourceTree = "<group>";
+		};
+		FB6A47072051A63B00E75AF1 /* MODIFICAR USUARIO */ = {
+			isa = PBXGroup;
+			children = (
+				FB70912B203ED08600A68D5B /* ModUserViewController.h */,
+				FB70912C203ED08600A68D5B /* ModUserViewController.m */,
+			);
+			path = "MODIFICAR USUARIO";
+			sourceTree = "<group>";
+		};
+		FB6A47082051A63D00E75AF1 /* REGISTRAR USUARIO */ = {
+			isa = PBXGroup;
+			children = (
+				FB709128203EC9F500A68D5B /* AddUserViewController.h */,
+				FB709129203EC9F500A68D5B /* AddUserViewController.m */,
+			);
+			path = "REGISTRAR USUARIO";
+			sourceTree = "<group>";
+		};
 		FB882240203D619D0094B9B2 = {
 			isa = PBXGroup;
 			children = (
@@ -128,33 +183,18 @@
 		FB88224B203D619D0094B9B2 /* Trip2Bass */ = {
 			isa = PBXGroup;
 			children = (
-				FB88224C203D619D0094B9B2 /* AppDelegate.h */,
+				FB6A47082051A63D00E75AF1 /* REGISTRAR USUARIO */,
+				FB6A47072051A63B00E75AF1 /* MODIFICAR USUARIO */,
+				FB6A47062051A63800E75AF1 /* EVENTOS */,
+				FB6A47052051A63500E75AF1 /* INFORMACION */,
+				FB6A47042051A61000E75AF1 /* LOGIN */,
 				FB88224D203D619D0094B9B2 /* AppDelegate.m */,
+				FB88224C203D619D0094B9B2 /* AppDelegate.h */,
 				FB882252203D619D0094B9B2 /* Main.storyboard */,
 				FB882255203D619D0094B9B2 /* Assets.xcassets */,
 				FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */,
 				FB88225A203D619D0094B9B2 /* Info.plist */,
 				FB88225B203D619D0094B9B2 /* main.m */,
-				FB709128203EC9F500A68D5B /* AddUserViewController.h */,
-				FB709129203EC9F500A68D5B /* AddUserViewController.m */,
-				FB70912B203ED08600A68D5B /* ModUserViewController.h */,
-				FB70912C203ED08600A68D5B /* ModUserViewController.m */,
-				FB8F447E203F7EA900AA416C /* LoginViewController.h */,
-				FB8F447F203F7EA900AA416C /* LoginViewController.m */,
-				FB4986712049491E005D71B9 /* AddEventViewController.h */,
-				FB4986722049491E005D71B9 /* AddEventViewController.m */,
-				FB2581F5204949CC007837C0 /* Eventos.h */,
-				FB2581F6204949CD007837C0 /* Eventos.m */,
-				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
-				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
-				FB2581F820494A25007837C0 /* EventosDataController.h */,
-				FB2581F920494A25007837C0 /* EventosDataController.m */,
-				FB3840A0204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.h */,
-				FB3840A1204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m */,
-				FB3840A3204FE08600471ADB /* InformacionDataController.h */,
-				FB3840A4204FE08600471ADB /* InformacionDataController.m */,
-				FB3840A6204FE17000471ADB /* Informacion.h */,
-				FB3840A7204FE17000471ADB /* Informacion.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";

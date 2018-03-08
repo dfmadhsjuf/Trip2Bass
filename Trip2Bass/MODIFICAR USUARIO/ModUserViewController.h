@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModUserViewController : UIViewController
+@interface ModUserViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+
+
+
 
 //DATOS PERSONALES
 @property (weak, nonatomic) IBOutlet UIImageView *fotoPerfil;
-@property (weak, nonatomic) IBOutlet UIImageView *fotoPortada;
 @property (weak, nonatomic) IBOutlet UITextField *tfUsuario;
 @property (weak, nonatomic) IBOutlet UITextField *tfNombre;
 @property (weak, nonatomic) IBOutlet UITextField *tfApellidos;
@@ -37,5 +39,7 @@
 @property (strong, nonatomic) IBOutlet UIView *popup;
 @property (weak, nonatomic) IBOutlet UIButton *bEnviarSolicitud;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollDatos;
+@property (weak, nonatomic) IBOutlet UIButton *bSeleccionarImagen;
 
 @end
