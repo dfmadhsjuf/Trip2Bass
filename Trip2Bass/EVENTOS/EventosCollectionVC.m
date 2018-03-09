@@ -9,15 +9,23 @@
 #import "EventosCollectionVC.h"
 #import "Eventos.h"
 #import "EventosDataController.h"
+#import "DetalleEventoViewController.h"
 
 @interface EventosCollectionVC ()
 @property (strong, nonatomic) IBOutlet UICollectionView *cv_misEventos;
+
+
 
 @end
 
 @implementation EventosCollectionVC
 
 static NSString * const reuseIdentifier = @"Cell";
+
+UILabel* tituloLabel;
+UILabel* tipoLabel;
+UILabel* areaLabel;
+UILabel* fechaLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,16 +76,16 @@ static NSString * const reuseIdentifier = @"Cell";
     //Nos creamos un evento a partir del evento que este en esa posicion de la lista.
     Eventos* eventoAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
     //Añadimos la informacion del evento a los labels de la celda.
-    UILabel* tituloLabel = (UILabel*) [cell viewWithTag:1];
+    tituloLabel = (UILabel*) [cell viewWithTag:1];
     tituloLabel.text = eventoAtIndex.nombre;
     
-    UILabel* tipoLabel = (UILabel*) [cell viewWithTag:2];
+    tipoLabel = (UILabel*) [cell viewWithTag:2];
     tipoLabel.text = eventoAtIndex.tipo;
     
-    UILabel* areaLabel = (UILabel*) [cell viewWithTag:3];
+    areaLabel = (UILabel*) [cell viewWithTag:3];
     areaLabel.text = eventoAtIndex.area;
     
-    UILabel* fechaLabel = (UILabel*) [cell viewWithTag:4];
+    fechaLabel = (UILabel*) [cell viewWithTag:4];
     fechaLabel.text = eventoAtIndex.fecha;
     
     //foto de fondo
@@ -95,6 +103,16 @@ static NSString * const reuseIdentifier = @"Cell";
     
     return cell;
 }
+/**
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"pasaDatosEvento"]) {
+        DetalleEventoViewController* segundoView = [segue destinationViewController];
+        segundoView.titulo = tituloLabel;
+        
+    }
+}
+*/
+
 
 #pragma mark <UICollectionViewDelegate>
 

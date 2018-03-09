@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "EventosCollectionVC.h"
 
 @interface LoginViewController ()
 
@@ -44,17 +45,40 @@
 
 
 - (IBAction)SignIn:(id)sender {
-    if ([self.tfUsername isHidden]) {
-        [self.tfUsername setHidden:NO];
-        [self.tfPassword setHidden:NO];
-        [self.lRecordarUsuario setHidden:NO];
-        [self.swRecordarUsuario setHidden:NO];
-        [self.tfUsername setUserInteractionEnabled:YES];
-        [self.tfPassword setUserInteractionEnabled:YES];
-        [self.swRecordarUsuario setUserInteractionEnabled:YES];
-    } 
+   
     
    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"loguea"]) {
+        
+        UITabBarController *tabar=(UITabBarController*)segue.destinationViewController;
+        EventosCollectionVC *scheduleController = (EventosCollectionVC *)[tabar.viewControllers objectAtIndex:0];;
+        //self.tfUsername.text = scheduleController.username;
+        
+        
+        //UITabBarController* tabbar = segue.destinationViewController;
+        //EventosCollectionVC* eventos = [tabbar.viewControllers objectAtIndex:0];
+        //self.tfUsername.text = eventos.username;
+        /**if ([self.tfUsername isHidden]) {
+            [self.tfUsername setHidden:NO];
+            [self.tfPassword setHidden:NO];
+            [self.lRecordarUsuario setHidden:NO];
+            [self.swRecordarUsuario setHidden:NO];
+            [self.tfUsername setUserInteractionEnabled:YES];
+            [self.tfPassword setUserInteractionEnabled:YES];
+            [self.swRecordarUsuario setUserInteractionEnabled:YES];
+        }
+        else {
+         
+        }*/
+        
+    }
+
+    
+    
+    
 }
 
 /*

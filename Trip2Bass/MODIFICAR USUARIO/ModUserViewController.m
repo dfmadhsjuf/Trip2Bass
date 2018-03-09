@@ -31,6 +31,9 @@
     [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.tfFechaNac setInputView: datePicker];
     
+    //pickerview
+    
+    
     //creamos array con todos los text fields
     
     

@@ -12,5 +12,6 @@
 @interface EventosCollectionVC : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) EventosDataController* dataController;
+@property NSString* username;
 
 @end
