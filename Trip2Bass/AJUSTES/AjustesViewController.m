@@ -37,9 +37,6 @@
 }
 */
 
-- (IBAction)cancel:(UIStoryboard*)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 
 

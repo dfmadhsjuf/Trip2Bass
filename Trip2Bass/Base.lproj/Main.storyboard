@@ -515,10 +515,10 @@
             </objects>
             <point key="canvasLocation" x="1373" y="1631"/>
         </scene>
-        <!--Ajustes View Controller-->
+        <!--View Controller-->
         <scene sceneID="FtJ-UO-ke2">
             <objects>
-                <viewController id="yuH-n7-Jjb" customClass="AjustesViewController" sceneMemberID="viewController">
+                <viewController id="yuH-n7-Jjb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DsW-sP-ccK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -932,7 +932,7 @@
                         <segue destination="Fkp-1p-VFX" kind="relationship" relationship="viewControllers" id="AYj-mG-ppe"/>
                         <segue destination="Ml9-KL-PvV" kind="relationship" relationship="viewControllers" id="K1O-t8-mGE"/>
                         <segue destination="upo-z9-7GR" kind="relationship" relationship="viewControllers" id="n1C-dh-ny8"/>
-                        <segue destination="GQH-B9-wkl" kind="relationship" relationship="viewControllers" id="WKg-pk-0Vn"/>
+                        <segue destination="GQH-B9-wkl" kind="relationship" relationship="viewControllers" id="jnt-8R-vlh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6N-78-fhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1355,7 +1355,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Atrás" id="k4E-jp-ARv">
                             <color key="tintColor" red="0.60946409310000005" green="0.86743617370000003" blue="0.15739546569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="cancel:" destination="Ltr-I5-ULH" id="XXA-vL-ZCk"/>
+                                <action selector="back:" destination="oQD-AN-185" id="ytg-ur-YzG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1605,7 +1605,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="yuH-n7-Jjb" kind="relationship" relationship="rootViewController" id="Ugd-wF-7CV"/>
+                        <segue destination="yuH-n7-Jjb" kind="relationship" relationship="rootViewController" id="4Cl-MI-Lhk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DF-9v-1wC" userLabel="First Responder" sceneMemberID="firstResponder"/>

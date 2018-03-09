@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AjustesViewController : UIViewController 
-@property (weak, nonatomic) IBOutlet UITextField *tfPickerTema;
-@property (weak, nonatomic) IBOutlet UITextField *tfPickerColor;
 
 @end
