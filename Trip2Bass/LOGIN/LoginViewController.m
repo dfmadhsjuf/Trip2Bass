@@ -19,15 +19,12 @@
     [super viewDidLoad];
     
     //diseño boton Sign IN
-    [self.bSignIn.layer setBorderColor:[[UIColor blackColor] CGColor]];
-    [self.bSignIn.layer setBorderWidth:1.5];
+    //[self.bSignIn.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    //[self.bSignIn.layer setBorderWidth:1.5];
     [self.bSignIn.layer setCornerRadius:15];
     
     //diseño boton Sign UP
-    [self.bSignUp.layer setBorderColor:[[UIColor blackColor] CGColor]];
-    [self.bSignUp.layer setBorderWidth:1.5];
     [self.bSignUp.layer setCornerRadius:15];
-    
     
     //esconder teclado en username
     [self.tfUsername becomeFirstResponder];
@@ -42,53 +39,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-- (IBAction)SignIn:(id)sender {
-   
-    
-   
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"loguea"]) {
-        
-        UITabBarController *tabar=(UITabBarController*)segue.destinationViewController;
-        EventosCollectionVC *scheduleController = (EventosCollectionVC *)[tabar.viewControllers objectAtIndex:0];;
-        //self.tfUsername.text = scheduleController.username;
-        
-        
-        //UITabBarController* tabbar = segue.destinationViewController;
-        //EventosCollectionVC* eventos = [tabbar.viewControllers objectAtIndex:0];
-        //self.tfUsername.text = eventos.username;
-        /**if ([self.tfUsername isHidden]) {
-            [self.tfUsername setHidden:NO];
-            [self.tfPassword setHidden:NO];
-            [self.lRecordarUsuario setHidden:NO];
-            [self.swRecordarUsuario setHidden:NO];
-            [self.tfUsername setUserInteractionEnabled:YES];
-            [self.tfPassword setUserInteractionEnabled:YES];
-            [self.swRecordarUsuario setUserInteractionEnabled:YES];
-        }
-        else {
-         
-        }*/
-        
-    }
-
-    
-    
-    
-}
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"loguea"]) {
+        
+        UITabBarController *tabBarController = segue.destinationViewController;
+        UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
+        EventosCollectionVC *controller = (EventosCollectionVC *)[[navigationController viewControllers] objectAtIndex:0];
+        
+        controller.username = self.tfUsername.text;
+        
+    }
 }
-*/
+
 
 @end

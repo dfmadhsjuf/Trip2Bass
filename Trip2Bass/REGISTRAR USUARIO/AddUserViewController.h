@@ -10,21 +10,28 @@
 
 @interface AddUserViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *fotoPerfil;
-@property (weak, nonatomic) IBOutlet UITextField *tfUsuaio;
+//datos personales
 @property (weak, nonatomic) IBOutlet UITextField *tfNombre;
 @property (weak, nonatomic) IBOutlet UITextField *tfApellidos;
 @property (weak, nonatomic) IBOutlet UITextField *tfCiudad;
 @property (weak, nonatomic) IBOutlet UITextField *tfTelefono;
 @property (weak, nonatomic) IBOutlet UITextField *tfEmail;
-@property (weak, nonatomic) IBOutlet UITextField *fechaNacimiento;
+@property (weak, nonatomic) IBOutlet UITextField *tfFecha;
+
+//datos cuenta
+@property (weak, nonatomic) IBOutlet UITextField *tfUsuario;
+@property (weak, nonatomic) IBOutlet UITextField *tfPass;
+@property (weak, nonatomic) IBOutlet UITextField *tfConfirmarPass;
+
+//datos coche
 @property (weak, nonatomic) IBOutlet UISwitch *swCoche;
-@property (weak, nonatomic) IBOutlet UITextField *marca;
-@property (weak, nonatomic) IBOutlet UITextField *modelo;
-@property (weak, nonatomic) IBOutlet UITextField *plazas;
-@property (weak, nonatomic) IBOutlet UITextField *color;
+@property (weak, nonatomic) IBOutlet UITextField *tfMarca;
+@property (weak, nonatomic) IBOutlet UITextField *tfModelo;
+@property (weak, nonatomic) IBOutlet UITextField *tfPlazas;
+@property (weak, nonatomic) IBOutlet UITextField *tfCcolor;
 @property (weak, nonatomic) IBOutlet UIButton *bRegistrarse;
 
-
+//scroll
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 - (IBAction) pickImage:(id)sender;

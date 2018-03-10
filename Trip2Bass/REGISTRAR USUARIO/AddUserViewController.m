@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //cambiar altura textfields
+    [self redondeaBordes];
+    
     
     //hacer scroll y foto redonda
     self.fotoPerfil.layer.cornerRadius = self.fotoPerfil.frame.size.width /2;
@@ -31,6 +34,29 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)redondeaBordes{
+    NSArray* textfields = [NSArray arrayWithObjects:self.tfNombre, self.tfApellidos, self.tfCiudad, self.tfTelefono, self.tfEmail, self.tfFecha, self.tfUsuario, self.tfPass, self.tfConfirmarPass, self.tfMarca, self.tfModelo, self.tfCcolor, self.tfPlazas, nil];
+    for (int i = 0; i < [textfields count]; i++) {
+        [[[textfields objectAtIndex:i] layer] setCornerRadius:5];
+        [[textfields objectAtIndex:i] setClipsToBounds:YES] ;
+    }
+}
+
+-(IBAction) switchValueChanged{
+    NSArray* datosCoche = [NSArray arrayWithObjects:self.tfMarca, self.tfModelo, self.tfCcolor, self.tfPlazas, nil];
+    if ([self.swCoche isOn]) {
+        for (int i = 0; i < [datosCoche count]; i++) {
+            [[datosCoche objectAtIndex:i] setEnabled:YES];
+            [[datosCoche objectAtIndex:i] setHidden:NO];
+        }
+    }else{
+        for (int i = 0; i < [datosCoche count]; i++) {
+            [[datosCoche objectAtIndex:i] setEnabled:NO];
+            [[datosCoche objectAtIndex:i] setHidden:YES];
+        }
+    }
 }
 
 -(IBAction)pickImage:(id)sender{
@@ -61,10 +87,13 @@
 }
 */
 
+
+//cancelar creacion de usuario
 - (IBAction)cancel:(UIStoryboard*)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//crear usuario
 - (IBAction)createUser:(UIStoryboard*)sender {
     //code for create user
     [self dismissViewControllerAnimated:YES completion:nil];

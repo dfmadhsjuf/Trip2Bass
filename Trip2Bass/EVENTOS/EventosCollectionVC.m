@@ -30,6 +30,16 @@ UILabel* fechaLabel;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Bienvenido"
+                                                                   message:[NSString stringWithFormat:@"%@", self.username]
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,15 +59,22 @@ UILabel* fechaLabel;
     self.dataController = [[EventosDataController alloc] init];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"pasaDatosEvento"]) {
+        
+        //UITabBarController *tabBarController = segue.destinationViewController;
+        UINavigationController* navCont = segue.destinationViewController;
+        //UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
+        DetalleEventoViewController *controller = (DetalleEventoViewController *)[[navCont viewControllers] objectAtIndex:0];
+        controller.titulo.text = tituloLabel.text;
+        
+    }
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 
