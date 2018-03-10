@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfParking;
 @property (weak, nonatomic) IBOutlet UITextField *tfTerreno;
 @property (weak, nonatomic) IBOutlet UIButton *bUbicacion;
-@property (weak, nonatomic) IBOutlet UITextView *lIndicaciones;
+@property (weak, nonatomic) IBOutlet UITextField *tfIndicaciones;
 
 //BOTONES
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bCancel;

@@ -10,7 +10,6 @@
 #import "Eventos.h"
 #import "EventosDataController.h"
 #import "DetalleEventoViewController.h"
-#import "DBManager.h"
 
 @interface EventosCollectionVC ()
 @property (strong, nonatomic) IBOutlet UICollectionView *cv_misEventos;

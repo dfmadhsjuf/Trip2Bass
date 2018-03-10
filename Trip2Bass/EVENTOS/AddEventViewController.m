@@ -7,6 +7,8 @@
 //
 
 #import "AddEventViewController.h"
+#import "DBManager.h"
+#import "Eventos.h"
 
 @interface AddEventViewController ()
 
@@ -78,8 +80,47 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)createUser:(UIStoryboard*)sender {
-    //code for create user
+- (IBAction)crearEvento:(UIStoryboard*)sender {
+    //Inicialiamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    
+    //Recogemos los datos de la vista.
+    NSString* titulo = self.tfTituloEvento.text;
+    NSString* area = self.tfAreaEvento.text;
+    NSString* fechaInicio = self.tfFechaInicioEvento.text;
+    NSString* fechaFin = self.tfFechaFinEvento.text;
+    NSString* tipo;
+    NSString* descripcion;
+    NSString* musica;
+    NSString* foto;
+    if([self.ScTipoEvento selectedSegmentIndex] == 0){
+        tipo = @"Quedada";
+        descripcion = self.tfContenidoEvento.text;
+        musica = @" ";
+        foto = @"fondo_evento2";
+    }else{
+        tipo = @"Fiesta";
+        descripcion = @" ";
+        musica = self.tfContenidoEvento.text;
+        foto = @"fondo_evento1";
+    }
+    NSString* parkingTamaño = self.tfParking.text;
+    NSString* parkingAccesibilidad = self.tfAcceso.text;
+    NSString* parkingTerreno = self.tfTerreno.text;
+    
+    /***********LA UBICACION FALTA POR IMPLEMENTAR*************/
+    NSString* ubicacion = @"35.496060,-0.686623";
+    /**********************************************************/
+    
+    NSString* indicaciones = self.tfIndicaciones.text;
+
+    //Nos creamos un evento con los datos de la vista.
+    Eventos* evento = [[Eventos alloc] initWhitTitulo:titulo conArea:area conFechaInicio:fechaInicio conFechaFin:fechaFin conTipo:tipo conDescripcion:descripcion conMusica:musica conParkingTamaño:parkingTamaño conParkingAccesibilidad:parkingAccesibilidad conParkingTerreno:parkingTerreno conUbicacion:ubicacion conIndicaciones:indicaciones yFoto:foto];
+    
+    //Llamamos al metodo para meter el Evento en la BD.
+    [db insertaEvento:evento];
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

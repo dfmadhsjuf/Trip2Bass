@@ -947,7 +947,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="aceptar" id="FEW-cW-883">
                             <color key="tintColor" red="0.60946409310000005" green="0.86743617370000003" blue="0.15739546569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="createUser:" destination="jqb-Ab-bN6" id="zzg-47-qZw"/>
+                                <action selector="crearEvento:" destination="jqb-Ab-bN6" id="zzg-47-qZw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -959,7 +959,6 @@
                         <outlet property="bInvitar" destination="O58-3b-tVl" id="ez4-WP-rkR"/>
                         <outlet property="bUbicacion" destination="wwT-TT-M5Z" id="7ba-Ee-BtZ"/>
                         <outlet property="iFotoEvento" destination="tTb-FK-ZMx" id="SnZ-Ap-Fxo"/>
-                        <outlet property="lIndicaciones" destination="8lR-lD-6eh" id="crn-bq-Dmk"/>
                         <outlet property="popup" destination="hWd-EB-oK7" id="WcW-RS-kWg"/>
                         <outlet property="scroll" destination="FtL-pX-Z2t" id="DYY-4l-Thi"/>
                         <outlet property="tfAcceso" destination="qas-Pw-vFV" id="U0S-Z6-7Sq"/>
@@ -967,6 +966,7 @@
                         <outlet property="tfContenidoEvento" destination="T84-kT-2oQ" id="0gt-XS-DB3"/>
                         <outlet property="tfFechaFinEvento" destination="KGr-5O-Fv4" id="GxX-sf-Q1D"/>
                         <outlet property="tfFechaInicioEvento" destination="3hg-9N-24S" id="8kq-W9-dI8"/>
+                        <outlet property="tfIndicaciones" destination="8lR-lD-6eh" id="crn-bq-Dmk"/>
                         <outlet property="tfOrganizador" destination="Bgi-eQ-xKB" id="qrx-Oh-8R8"/>
                         <outlet property="tfParking" destination="M3Y-NM-sWY" id="HvL-aW-PO7"/>
                         <outlet property="tfTerreno" destination="W7h-YU-dKp" id="PSB-sl-Zd9"/>
@@ -1110,7 +1110,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellInfo" id="CG9-Iv-VYh">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="cellInfo" id="CG9-Iv-VYh">
                                 <rect key="frame" x="9" y="0.0" width="302" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
