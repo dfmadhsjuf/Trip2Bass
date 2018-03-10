@@ -29,6 +29,7 @@
 		FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB882285203D67110094B9B2 /* EventosCollectionVC.m */; };
 		FB8B433720520F6D0021B290 /* AjustesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8B433620520F6D0021B290 /* AjustesViewController.m */; };
 		FB8F4480203F7EA900AA416C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F447F203F7EA900AA416C /* LoginViewController.m */; };
+		FBB65FC3205474D70084D2D9 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FC2205474D70084D2D9 /* MapsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		FB8B433620520F6D0021B290 /* AjustesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AjustesViewController.m; path = AJUSTES/AjustesViewController.m; sourceTree = "<group>"; };
 		FB8F447E203F7EA900AA416C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FB8F447F203F7EA900AA416C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		FBB65FC1205474D70084D2D9 /* MapsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
+		FBB65FC2205474D70084D2D9 /* MapsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				FB8B433620520F6D0021B290 /* AjustesViewController.m */,
 				FB04A5102054345F00CAFAED /* DBManager.h */,
 				FB04A5112054345F00CAFAED /* DBManager.m */,
+				FBB65FC1205474D70084D2D9 /* MapsViewController.h */,
+				FBB65FC2205474D70084D2D9 /* MapsViewController.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,
 				FB8B433720520F6D0021B290 /* AjustesViewController.m in Sources */,
 				FB180B1C2051C3A000733D48 /* DetalleEventoViewController.m in Sources */,
+				FBB65FC3205474D70084D2D9 /* MapsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
