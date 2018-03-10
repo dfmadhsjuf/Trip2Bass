@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB04A5122054345F00CAFAED /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04A5112054345F00CAFAED /* DBManager.m */; };
+		FB04A5152054347500CAFAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04A5142054347500CAFAED /* libsqlite3.tbd */; };
+		FB04A51D2054560000CAFAED /* Trip2Bass.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FB04A51C2054560000CAFAED /* Trip2Bass.sqlite */; };
 		FB180B1C2051C3A000733D48 /* DetalleEventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB180B1B2051C3A000733D48 /* DetalleEventoViewController.m */; };
 		FB2581F7204949CD007837C0 /* Eventos.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2581F6204949CD007837C0 /* Eventos.m */; };
 		FB2581FA20494A25007837C0 /* EventosDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2581F920494A25007837C0 /* EventosDataController.m */; };
@@ -46,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB04A5102054345F00CAFAED /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		FB04A5112054345F00CAFAED /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		FB04A5142054347500CAFAED /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FB04A51C2054560000CAFAED /* Trip2Bass.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trip2Bass.sqlite; sourceTree = "<group>"; };
 		FB180B1A2051C3A000733D48 /* DetalleEventoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetalleEventoViewController.h; sourceTree = "<group>"; };
 		FB180B1B2051C3A000733D48 /* DetalleEventoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetalleEventoViewController.m; sourceTree = "<group>"; };
 		FB2581F5204949CC007837C0 /* Eventos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eventos.h; sourceTree = "<group>"; };
@@ -91,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB04A5152054347500CAFAED /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB04A5132054347500CAFAED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB04A5142054347500CAFAED /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB2F7DCD20520D4A0005FE9F /* AJUSTES */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +161,8 @@
 			children = (
 				FB4986712049491E005D71B9 /* AddEventViewController.h */,
 				FB4986722049491E005D71B9 /* AddEventViewController.m */,
-				FB2581F6204949CD007837C0 /* Eventos.m */,
 				FB2581F5204949CC007837C0 /* Eventos.h */,
+				FB2581F6204949CD007837C0 /* Eventos.m */,
 				FB882284203D67110094B9B2 /* EventosCollectionVC.h */,
 				FB882285203D67110094B9B2 /* EventosCollectionVC.m */,
 				FB2581F820494A25007837C0 /* EventosDataController.h */,
@@ -182,6 +198,7 @@
 				FB882264203D619D0094B9B2 /* Trip2BassTests */,
 				FB88226F203D619D0094B9B2 /* Trip2BassUITests */,
 				FB88224A203D619D0094B9B2 /* Products */,
+				FB04A5132054347500CAFAED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +215,7 @@
 		FB88224B203D619D0094B9B2 /* Trip2Bass */ = {
 			isa = PBXGroup;
 			children = (
+				FB04A51C2054560000CAFAED /* Trip2Bass.sqlite */,
 				FB2F7DCD20520D4A0005FE9F /* AJUSTES */,
 				FB6A47082051A63D00E75AF1 /* REGISTRAR USUARIO */,
 				FB6A47072051A63B00E75AF1 /* MODIFICAR USUARIO */,
@@ -213,6 +231,8 @@
 				FB88225B203D619D0094B9B2 /* main.m */,
 				FB8B433520520F6D0021B290 /* AjustesViewController.h */,
 				FB8B433620520F6D0021B290 /* AjustesViewController.m */,
+				FB04A5102054345F00CAFAED /* DBManager.h */,
+				FB04A5112054345F00CAFAED /* DBManager.m */,
 			);
 			path = Trip2Bass;
 			sourceTree = "<group>";
@@ -343,6 +363,7 @@
 			files = (
 				FB882259203D619D0094B9B2 /* LaunchScreen.storyboard in Resources */,
 				FB882256203D619D0094B9B2 /* Assets.xcassets in Resources */,
+				FB04A51D2054560000CAFAED /* Trip2Bass.sqlite in Resources */,
 				FB882254203D619D0094B9B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +398,7 @@
 				FB3840A2204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m in Sources */,
 				FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */,
 				FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */,
+				FB04A5122054345F00CAFAED /* DBManager.m in Sources */,
 				FB3840A8204FE17000471ADB /* Informacion.m in Sources */,
 				FB88225C203D619D0094B9B2 /* main.m in Sources */,
 				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,

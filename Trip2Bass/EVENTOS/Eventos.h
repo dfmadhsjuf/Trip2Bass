@@ -11,12 +11,20 @@
 @interface Eventos : NSObject
 
 //PROPIEDADES DE UN EVENTO
-@property NSString* nombre;
-@property NSString* tipo;
+@property NSString* titulo;
 @property NSString* area;
-@property NSString* fecha; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
+@property NSString* fechaInicio; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
+@property NSString* fechaFin; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
+@property NSString* tipo;
+@property NSString* descripcion;
+@property NSString* musica;
+@property NSString* parkingTamaño;
+@property NSString* parkingAccesibilidad;
+@property NSString* parkingTerreno;
+@property NSString* ubicacion;
+@property NSString* indicaciones;
 @property NSString* foto;
 
--(id)initWithName:(NSString*)nombre conTipo:(NSString*)tipo conArea:(NSString*)area yFecha:(NSString*)fecha;
+-(id) initWhitTitulo:(NSString*)titulo conArea:(NSString*)area conFechaInicio:(NSString*)fechaInicio conFechaFin:(NSString*)fechaFin conTipo:(NSString*)tipo conDescripcion:(NSString*)descripcion conMusica:(NSString*)musica conParkingTamaño:(NSString*)parkingTamaño conParkingAccesibilidad:(NSString*)parkingAccesibilidad conParkingTerreno:(NSString*)parkingTerreno conUbicacion:(NSString*)ubicacion conIndicaciones:(NSString*)indicaciones yFoto:(NSString*)foto;
 
 @end

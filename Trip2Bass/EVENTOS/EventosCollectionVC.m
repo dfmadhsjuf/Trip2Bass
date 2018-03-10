@@ -10,6 +10,7 @@
 #import "Eventos.h"
 #import "EventosDataController.h"
 #import "DetalleEventoViewController.h"
+#import "DBManager.h"
 
 @interface EventosCollectionVC ()
 @property (strong, nonatomic) IBOutlet UICollectionView *cv_misEventos;
@@ -30,23 +31,15 @@ UILabel* fechaLabel;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Bienvenido"
-                                                                   message:[NSString stringWithFormat:@"%@", self.username]
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Bienvenido" message:[NSString stringWithFormat:@"%@", self.username]preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
     
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,7 +87,7 @@ UILabel* fechaLabel;
     Eventos* eventoAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
     //Añadimos la informacion del evento a los labels de la celda.
     tituloLabel = (UILabel*) [cell viewWithTag:1];
-    tituloLabel.text = eventoAtIndex.nombre;
+    tituloLabel.text = eventoAtIndex.titulo;
     
     tipoLabel = (UILabel*) [cell viewWithTag:2];
     tipoLabel.text = eventoAtIndex.tipo;
@@ -103,7 +96,7 @@ UILabel* fechaLabel;
     areaLabel.text = eventoAtIndex.area;
     
     fechaLabel = (UILabel*) [cell viewWithTag:4];
-    fechaLabel.text = eventoAtIndex.fecha;
+    fechaLabel.text = eventoAtIndex.fechaInicio;
     
     //foto de fondo
     UIImageView* fondo = [(UIImageView*) cell viewWithTag:5];

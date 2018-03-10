@@ -11,16 +11,26 @@
 @implementation Eventos
 
 //CONSTRUCTOR DE EVENTOS
--(id)initWithName:(NSString*)nombre conTipo:(NSString*)tipo conArea:(NSString*)area yFecha:(NSString*)fecha{
+-(id) initWhitTitulo:(NSString*)titulo conArea:(NSString*)area conFechaInicio:(NSString*)fechaInicio conFechaFin:(NSString*)fechaFin conTipo:(NSString*)tipo conDescripcion:(NSString*)descripcion conMusica:(NSString*)musica conParkingTamaño:(NSString*)parkingTamaño conParkingAccesibilidad:(NSString*)parkingAccesibilidad conParkingTerreno:(NSString*)parkingTerreno conUbicacion:(NSString*)ubicacion conIndicaciones:(NSString*)indicaciones yFoto:(NSString*)foto{
     self = [super init];
-    if (self) {
-        self.nombre = nombre;
-        self.tipo = tipo;
+    if(self){
+        self.titulo = titulo;
         self.area = area;
-        self.fecha = fecha;
+        self.fechaInicio = fechaInicio;
+        self.fechaFin = fechaFin;
+        self.tipo = tipo;
+        self.descripcion = descripcion;
+        self.musica = musica;
+        self.parkingTamaño = parkingTamaño;
+        self.parkingAccesibilidad = parkingAccesibilidad;
+        self.parkingTerreno = parkingTerreno;
+        self.ubicacion = ubicacion;
+        self.indicaciones = indicaciones;
+        self.foto = foto;
         
         return self;
     }
+    
     return nil;
 }
 

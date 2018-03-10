@@ -8,6 +8,7 @@
 
 #import "EventosDataController.h"
 #import "Eventos.h"
+#import "DBManager.h"
 
 @interface EventosDataController()
 -(void) initializeDefaultDataList;
@@ -16,20 +17,13 @@
 @implementation EventosDataController
 
 -(void) initializeDefaultDataList{
-    //Inicializamos nuestra lista de eventos.
+    //Inicializamos la lista de los eventos.
     _masterEventosList =  [[NSMutableArray alloc] init];
+    //Inicialiamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    //Cargamos los eventos en la lista de eventos.
+    self.masterEventosList = [db getEventosUsuario];
     
-    //Cargamos los eventos iniciales.
-    Eventos* evento = [[Eventos alloc]initWithName:@"Fiesta1" conTipo:@"Fiesta" conArea:@"ALC" yFecha:@"09/03/2018"];
-    [self addEvento:evento];
-    evento = [[Eventos alloc]initWithName:@"Quedada1" conTipo:@"Quedada" conArea:@"VLC" yFecha:@"15/06/2018"];
-    [self addEvento:evento];
-    evento = [[Eventos alloc] initWithName:@"Fiesta2" conTipo:@"Fiesta" conArea:@"BCN" yFecha:@"15/03/2018"];
-    [self addEvento:evento];
-    evento = [[Eventos alloc]initWithName:@"Quedada2" conTipo:@"Quedada" conArea:@"VLC" yFecha:@"15/06/2018"];
-    [self addEvento:evento];
-    evento = [[Eventos alloc] initWithName:@"Fiesta3" conTipo:@"Fiesta" conArea:@"BCN" yFecha:@"15/03/2018"];
-    [self addEvento:evento];
     //Segun el tipo de evento le asociamos una foto u otra
     for (int i = 0; i < [self.masterEventosList count]; i++) {
         Eventos* ev = [self objectInListAtIndex:i];
