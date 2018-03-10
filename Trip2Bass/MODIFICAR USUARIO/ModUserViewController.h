@@ -37,7 +37,7 @@
 //BOTONES
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bEdit;
 @property (weak, nonatomic) IBOutlet UIButton *bLogOut;
-@property (weak, nonatomic) IBOutlet UIButton *bOrganizador;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bOrganizador;
 
 //POPUP
 @property (strong, nonatomic) IBOutlet UIView *popup;

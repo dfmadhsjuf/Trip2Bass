@@ -16,12 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self eligeImagenEvento];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)eligeImagenEvento{
+    if ([self.ScTipoEvento selectedSegmentIndex] == 0) {
+        [self.iFotoEvento setImage:[UIImage imageNamed:@"fondo_evento2"]];
+    }else {
+        [self.iFotoEvento setImage:[UIImage imageNamed:@"fondo_evento1"]];
+    }
+}
+
+-(IBAction) SCValueChanged{
+    [self eligeImagenEvento];
+    if ([self.ScTipoEvento selectedSegmentIndex] == 0) {
+        [self.tfContenidoEvento setText:@"ACTIVIDAES"];
+    }else {
+        [self.tfContenidoEvento setText:@"MÚSICA"];
+    }
 }
 
 /*

@@ -13,16 +13,16 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *iFotoEvento;
 @property (weak, nonatomic) IBOutlet UITextField *tfTituloEvento;
+@property (weak, nonatomic) IBOutlet UITextField *tfOrganizador;
 @property (weak, nonatomic) IBOutlet UITextField *tfAreaEvento;
 @property (weak, nonatomic) IBOutlet UITextField *tfFechaInicioEvento;
 @property (weak, nonatomic) IBOutlet UITextField *tfFechaFinEvento;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *tfTipoEventoSC;
-@property (weak, nonatomic) IBOutlet UITextField *tfAsunto;
-
-
-
+@property (weak, nonatomic) IBOutlet UISegmentedControl *ScTipoEvento;
+@property (weak, nonatomic) IBOutlet UITextView *tfContenidoEvento;
+@property (weak, nonatomic) IBOutlet UITextField *tfAcceso;
+@property (weak, nonatomic) IBOutlet UITextField *tfParking;
+@property (weak, nonatomic) IBOutlet UITextField *tfTerreno;
 @property (weak, nonatomic) IBOutlet UIButton *bUbicacion;
-@property (weak, nonatomic) IBOutlet UILabel *lUbicacion;
 @property (weak, nonatomic) IBOutlet UITextView *lIndicaciones;
 
 //BOTONES
