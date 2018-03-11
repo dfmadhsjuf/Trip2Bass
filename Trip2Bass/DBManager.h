@@ -27,6 +27,7 @@
 -(void)copyDatabaseIntoDocumentsDirectory;
 -(NSMutableArray*)getEventosUsuario;
 -(void) insertaEvento:(Eventos*) evento;
+-(NSMutableArray*) getInfo;
 
 //-(NSArray *)loadDataFromDB:(NSString *)query;
 //-(void)executeQuery:(NSString *)query;

@@ -8,6 +8,7 @@
 
 #import "DBManager.h"
 #import "Eventos.h"
+#import "Informacion.h"
 
 @interface DBManager()
 //@property (nonatomic, retain) NSMutableArray* arrResults;
@@ -160,6 +161,57 @@
     }
     //Cerramos la conexion con la BD.
     sqlite3_close(db);
+}
+
+//Metodo que devuelve la todas las filas de la tabla info.
+-(NSMutableArray*) getInfo{
+    //Nos creamos el array de Info.
+    NSMutableArray* listaInfo = [[NSMutableArray alloc] init];
+    
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        const char* sentenciaSQL = "SELECT * FROM INFO";
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, sentenciaSQL, -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de mostrarEventos: %s", sqlite3_errmsg(db));
+        }else{
+            //Si la consulta se ha ejecuta bien pues sacamos los datos y los cargamos en la lista de info.
+            while (sqlite3_step(statement) == SQLITE_ROW) {
+                Informacion* info = [[Informacion alloc] init];
+                info.tituloInfo = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 1)];
+                info.autor = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 2)];
+                info.fechaPublicacion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 3)];
+                info.contenidoInfo = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 4)];
+                
+                //Añadimos la info a la lista.
+                [listaInfo addObject:info];
+            }
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
+    
+    //Devolvemos la lista de info.
+    return listaInfo;
+    
 }
 
 //-(void)runQuery:(const char *)query isQueryExecutable:(BOOL)queryExecutable{
