@@ -40,6 +40,10 @@ UILabel* fechaLabel;
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    
+    //Inicializamos el dataController y le pasamos el nickname.
+    self.dataController = [[EventosDataController alloc] initWhitNickname:self.username];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,10 +51,10 @@ UILabel* fechaLabel;
     // Dispose of any resources that can be recreated.
 }
 
--(void)awakeFromNib{
-    [super awakeFromNib];
-    self.dataController = [[EventosDataController alloc] init];
-}
+//-(void)awakeFromNib{
+//    [super awakeFromNib];
+//    self.dataController = [[EventosDataController alloc] initWhitNickname:self.username];
+//}
 
 
 #pragma mark - Navigation

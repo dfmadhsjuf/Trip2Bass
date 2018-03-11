@@ -17,6 +17,7 @@
 @implementation EventosDataController
 
 -(void) initializeDefaultDataList{
+    
     //Inicializamos la lista de los eventos.
     _masterEventosList =  [[NSMutableArray alloc] init];
     //Inicialiamos la BD.
@@ -41,9 +42,10 @@
     }
 }
 
-- (id)init {
+- (id)initWhitNickname:(NSString*)nicknameUsuario {
     
     if (self = [super init]) {
+        self.nicknameUsuario = nicknameUsuario;
         [self initializeDefaultDataList];
         return self;
     }

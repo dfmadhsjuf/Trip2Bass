@@ -12,10 +12,13 @@
 @interface EventosDataController : NSObject
 
 @property (nonatomic, copy) NSMutableArray* masterEventosList;
+@property NSString* nicknameUsuario;
 
 
 -(NSUInteger) countOfList;
 -(Eventos*) objectInListAtIndex:(NSUInteger)theIndex;
 -(void) addEvento:(Eventos*) evento;
+
+- (id)initWhitNickname:(NSString*)nicknameUsuario;
 
 @end
