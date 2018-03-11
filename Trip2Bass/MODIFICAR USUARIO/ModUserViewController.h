@@ -11,8 +11,8 @@
 
 @interface ModUserViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,MFMailComposeViewControllerDelegate>
 
-
-
+//Una propiedad para recoger el nickname del usuario que se ha logueado.
+@property NSString* nicknameUsuario;
 
 //DATOS PERSONALES
 @property (weak, nonatomic) IBOutlet UIImageView *fotoPerfil;
