@@ -98,8 +98,8 @@
 		FB882272203D619D0094B9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB882284203D67110094B9B2 /* EventosCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventosCollectionVC.h; sourceTree = "<group>"; };
 		FB882285203D67110094B9B2 /* EventosCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventosCollectionVC.m; sourceTree = "<group>"; };
-		FB8B433520520F6D0021B290 /* AjustesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AjustesViewController.h; path = AJUSTES/AjustesViewController.h; sourceTree = "<group>"; };
-		FB8B433620520F6D0021B290 /* AjustesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AjustesViewController.m; path = AJUSTES/AjustesViewController.m; sourceTree = "<group>"; };
+		FB8B433520520F6D0021B290 /* AjustesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AjustesViewController.h; sourceTree = "<group>"; };
+		FB8B433620520F6D0021B290 /* AjustesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AjustesViewController.m; sourceTree = "<group>"; };
 		FB8F447E203F7EA900AA416C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FB8F447F203F7EA900AA416C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FBB65FC1205474D70084D2D9 /* MapsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
@@ -162,6 +162,8 @@
 		FB2F7DCD20520D4A0005FE9F /* AJUSTES */ = {
 			isa = PBXGroup;
 			children = (
+				FB8B433520520F6D0021B290 /* AjustesViewController.h */,
+				FB8B433620520F6D0021B290 /* AjustesViewController.m */,
 			);
 			path = AJUSTES;
 			sourceTree = "<group>";
@@ -262,8 +264,6 @@
 				FB882257203D619D0094B9B2 /* LaunchScreen.storyboard */,
 				FB88225A203D619D0094B9B2 /* Info.plist */,
 				FB88225B203D619D0094B9B2 /* main.m */,
-				FB8B433520520F6D0021B290 /* AjustesViewController.h */,
-				FB8B433620520F6D0021B290 /* AjustesViewController.m */,
 				FB04A5102054345F00CAFAED /* DBManager.h */,
 				FB04A5112054345F00CAFAED /* DBManager.m */,
 				FBB65FC1205474D70084D2D9 /* MapsViewController.h */,

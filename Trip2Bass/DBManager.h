@@ -21,15 +21,11 @@
 //Una propiedad para almacenar el ID de la ultima fila que se ha insertado.
 @property (nonatomic) long long lastInsertedRowID;
 
-//@property (nonatomic, strong) NSMutableArray *arrColumnNames;
-
 -(id)initWithDatabaseFilename:(NSString*)dbFilename;
 -(void)copyDatabaseIntoDocumentsDirectory;
 -(NSMutableArray*)getEventosUsuario;
 -(void) insertaEvento:(Eventos*) evento;
 -(NSMutableArray*) getInfo;
-
-//-(NSArray *)loadDataFromDB:(NSString *)query;
-//-(void)executeQuery:(NSString *)query;
+-(BOOL) validarUsuario:(NSString*)usuario conPassword:(NSString*)password;
 
 @end

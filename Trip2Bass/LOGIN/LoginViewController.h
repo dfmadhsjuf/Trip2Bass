@@ -18,7 +18,7 @@
 //BOTONES
 @property (weak, nonatomic) IBOutlet UIButton *bSignIn;
 @property (weak, nonatomic) IBOutlet UIButton *bSignUp;
-@property (weak, nonatomic) IBOutlet UIButton *bLogin;
+//@property (weak, nonatomic) IBOutlet UIButton *bLogin;
 
 
 @end
