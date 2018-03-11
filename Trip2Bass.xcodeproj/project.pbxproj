@@ -31,6 +31,12 @@
 		FB8B433720520F6D0021B290 /* AjustesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8B433620520F6D0021B290 /* AjustesViewController.m */; };
 		FB8F4480203F7EA900AA416C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F447F203F7EA900AA416C /* LoginViewController.m */; };
 		FBB65FC3205474D70084D2D9 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FC2205474D70084D2D9 /* MapsViewController.m */; };
+		FBB65FD02055716C0084D2D9 /* InvitarUsuariosDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FCF2055716C0084D2D9 /* InvitarUsuariosDataController.m */; };
+		FBB65FD620557D390084D2D9 /* Usuarios.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FD520557D390084D2D9 /* Usuarios.m */; };
+		FBB65FD920557EA70084D2D9 /* InvitacionesUsuariosCVController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FD820557EA70084D2D9 /* InvitacionesUsuariosCVController.m */; };
+		FBB65FE0205588B90084D2D9 /* Comentario.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FDF205588B90084D2D9 /* Comentario.m */; };
+		FBB65FE3205588CA0084D2D9 /* ComentariosDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FE2205588CA0084D2D9 /* ComentariosDataController.m */; };
+		FBB65FE620558FB60084D2D9 /* ComentariosCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB65FE520558FB60084D2D9 /* ComentariosCollectionVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +106,18 @@
 		FB8F447F203F7EA900AA416C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FBB65FC1205474D70084D2D9 /* MapsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
 		FBB65FC2205474D70084D2D9 /* MapsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
+		FBB65FCE2055716C0084D2D9 /* InvitarUsuariosDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvitarUsuariosDataController.h; sourceTree = "<group>"; };
+		FBB65FCF2055716C0084D2D9 /* InvitarUsuariosDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvitarUsuariosDataController.m; sourceTree = "<group>"; };
+		FBB65FD420557D390084D2D9 /* Usuarios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Usuarios.h; sourceTree = "<group>"; };
+		FBB65FD520557D390084D2D9 /* Usuarios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Usuarios.m; sourceTree = "<group>"; };
+		FBB65FD720557EA70084D2D9 /* InvitacionesUsuariosCVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvitacionesUsuariosCVController.h; sourceTree = "<group>"; };
+		FBB65FD820557EA70084D2D9 /* InvitacionesUsuariosCVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvitacionesUsuariosCVController.m; sourceTree = "<group>"; };
+		FBB65FDE205588B90084D2D9 /* Comentario.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comentario.h; sourceTree = "<group>"; };
+		FBB65FDF205588B90084D2D9 /* Comentario.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comentario.m; sourceTree = "<group>"; };
+		FBB65FE1205588CA0084D2D9 /* ComentariosDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComentariosDataController.h; sourceTree = "<group>"; };
+		FBB65FE2205588CA0084D2D9 /* ComentariosDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComentariosDataController.m; sourceTree = "<group>"; };
+		FBB65FE420558FB60084D2D9 /* ComentariosCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComentariosCollectionVC.h; sourceTree = "<group>"; };
+		FBB65FE520558FB60084D2D9 /* ComentariosCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComentariosCollectionVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,8 +263,10 @@
 				FB6A47082051A63D00E75AF1 /* REGISTRAR USUARIO */,
 				FB6A47072051A63B00E75AF1 /* MODIFICAR USUARIO */,
 				FB6A47062051A63800E75AF1 /* EVENTOS */,
+				FBB65FC720556FB60084D2D9 /* INVITAR USUARIOS */,
 				FB6A47052051A63500E75AF1 /* INFORMACION */,
 				FB6A47042051A61000E75AF1 /* LOGIN */,
+				FBB65FDA205587530084D2D9 /* COMENTARIOS */,
 				FB88224C203D619D0094B9B2 /* AppDelegate.h */,
 				FB88224D203D619D0094B9B2 /* AppDelegate.m */,
 				FB882252203D619D0094B9B2 /* Main.storyboard */,
@@ -278,6 +298,32 @@
 				FB882272203D619D0094B9B2 /* Info.plist */,
 			);
 			path = Trip2BassUITests;
+			sourceTree = "<group>";
+		};
+		FBB65FC720556FB60084D2D9 /* INVITAR USUARIOS */ = {
+			isa = PBXGroup;
+			children = (
+				FBB65FD720557EA70084D2D9 /* InvitacionesUsuariosCVController.h */,
+				FBB65FD820557EA70084D2D9 /* InvitacionesUsuariosCVController.m */,
+				FBB65FCE2055716C0084D2D9 /* InvitarUsuariosDataController.h */,
+				FBB65FCF2055716C0084D2D9 /* InvitarUsuariosDataController.m */,
+				FBB65FD420557D390084D2D9 /* Usuarios.h */,
+				FBB65FD520557D390084D2D9 /* Usuarios.m */,
+			);
+			path = "INVITAR USUARIOS";
+			sourceTree = "<group>";
+		};
+		FBB65FDA205587530084D2D9 /* COMENTARIOS */ = {
+			isa = PBXGroup;
+			children = (
+				FBB65FE1205588CA0084D2D9 /* ComentariosDataController.h */,
+				FBB65FE2205588CA0084D2D9 /* ComentariosDataController.m */,
+				FBB65FDE205588B90084D2D9 /* Comentario.h */,
+				FBB65FDF205588B90084D2D9 /* Comentario.m */,
+				FBB65FE420558FB60084D2D9 /* ComentariosCollectionVC.h */,
+				FBB65FE520558FB60084D2D9 /* ComentariosCollectionVC.m */,
+			);
+			path = COMENTARIOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,14 +543,20 @@
 				FB3840A5204FE08600471ADB /* InformacionDataController.m in Sources */,
 				FB3840A2204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m in Sources */,
 				FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */,
+				FBB65FD920557EA70084D2D9 /* InvitacionesUsuariosCVController.m in Sources */,
 				FB882286203D67110094B9B2 /* EventosCollectionVC.m in Sources */,
 				FB04A5122054345F00CAFAED /* DBManager.m in Sources */,
+				FBB65FD620557D390084D2D9 /* Usuarios.m in Sources */,
+				FBB65FE3205588CA0084D2D9 /* ComentariosDataController.m in Sources */,
 				FB3840A8204FE17000471ADB /* Informacion.m in Sources */,
 				FB88225C203D619D0094B9B2 /* main.m in Sources */,
 				FB88224E203D619D0094B9B2 /* AppDelegate.m in Sources */,
 				FB8B433720520F6D0021B290 /* AjustesViewController.m in Sources */,
+				FBB65FE620558FB60084D2D9 /* ComentariosCollectionVC.m in Sources */,
 				FB180B1C2051C3A000733D48 /* DetalleEventoViewController.m in Sources */,
 				FBB65FC3205474D70084D2D9 /* MapsViewController.m in Sources */,
+				FBB65FE0205588B90084D2D9 /* Comentario.m in Sources */,
+				FBB65FD02055716C0084D2D9 /* InvitarUsuariosDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2P22JRLD6Y;
 				INFOPLIST_FILE = Trip2Bass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2Bass;
@@ -683,6 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2P22JRLD6Y;
 				INFOPLIST_FILE = Trip2Bass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Trip2Bass;

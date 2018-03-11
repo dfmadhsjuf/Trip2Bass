@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Comentario;
+
 @interface DetalleEventoViewController : UIViewController
+
+//DATOS EVENTO
 @property (weak, nonatomic) IBOutlet UIImageView *fotoEvento;
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
 @property (weak, nonatomic) IBOutlet UILabel *area;
@@ -22,9 +26,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *parking;
 @property (weak, nonatomic) IBOutlet UIButton *ubicacion;
 @property (weak, nonatomic) IBOutlet UILabel *indicaciones;
+
+//BOTONES
 @property (weak, nonatomic) IBOutlet UIButton *bComentar;
 
+//POPUP COMENTARIO
 @property (strong, nonatomic) IBOutlet UIView *popup;
+@property (strong, nonatomic) IBOutlet UITextField *usuario;
+@property (strong, nonatomic) IBOutlet UITextField *tipoComentario;
+@property (strong, nonatomic) IBOutlet UITextView *contenidoComentario;
+@property Comentario* comentario;
+
+//SCROLL
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @end

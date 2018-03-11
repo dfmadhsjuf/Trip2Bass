@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ModUserViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ModUserViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,MFMailComposeViewControllerDelegate>
 
 
 

@@ -30,6 +30,7 @@ UILabel* fechaLabel;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //ALERTA BIENVENIDA
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Bienvenido" message:[NSString stringWithFormat:@"%@", self.username]preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];

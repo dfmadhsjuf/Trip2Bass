@@ -50,7 +50,6 @@
         [[textfields objectAtIndex:i] setClipsToBounds:YES] ;
         [[textfields objectAtIndex:i] setBackgroundColor:[UIColor colorWithRed:87/255.0 green:89/255.0 blue:93/255.0 alpha:1]];
     }
-    
 }
 
 -(void) datePickerValueChanged:(id)sender
@@ -68,6 +67,48 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)sendEmail {
+    // Email Subject
+    NSString *emailTitle = @"Test Email";
+    // Email Content
+    NSString *messageBody = @"Test Subject!";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"claudia.manzanares.soria@gmail.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    //[self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result) {
+        case MFMailComposeResultSent:
+            NSLog(@"You sent the email.");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"You saved a draft of this email");
+            break;
+        case MFMailComposeResultCancelled:
+            NSLog(@"You cancelled sending this email.");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail failed:  An error occurred when trying to compose this email");
+            break;
+        default:
+            NSLog(@"An error occurred when trying to compose this email");
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (IBAction)edit:(id)sender {
@@ -143,6 +184,7 @@
 //ENVIAR SOLICITUD ORGANIZADOR
 - (IBAction)enviar:(id)sender {
     //codigo enviar correo
+    [self sendEmail];
     
     //deshabilitamos scroll y boton
     [self.scroll setUserInteractionEnabled:YES];

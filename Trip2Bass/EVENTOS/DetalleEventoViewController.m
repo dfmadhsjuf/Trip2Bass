@@ -7,6 +7,8 @@
 //
 
 #import "DetalleEventoViewController.h"
+#import "Comentario.h"
+#import "ComentariosCollectionVC.h"
 
 @interface DetalleEventoViewController ()
 
@@ -42,8 +44,8 @@
 }
 //ENVIAR COMENTARIO EVENTO
 - (IBAction)enviar:(id)sender {
-    //codigo enviar correo
-    
+    //codigo enviar comentario
+    self.comentario = [[Comentario alloc]initWithUsuario:self.usuario.text tipo:self.tipoComentario.text contenido:self.contenidoComentario.text];
     //deshabilitamos scroll y boton
     [self.scroll setUserInteractionEnabled:YES];
     //cerramos popup
@@ -51,6 +53,17 @@
     
 }
 
+/**
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"crearComentario"]&& self.comentario != nil) {
+            ComentariosCollectionVC* cv_comentarios = segue.destinationViewController;
+        
+            [cv_comentarios addNuevoComentario:self.comentario];
+            [cv_comentarios refreshData];
+        
+    }
+}
+*/
 
 /*
 #pragma mark - Navigation
