@@ -7,6 +7,7 @@
 //
 
 #import "ModUserViewController.h"
+#import "DBManager.h"
 
 @interface ModUserViewController ()
 
@@ -36,10 +37,31 @@
     
     //pickerview
     
-    
     //[self.tfFechaNac resignFirstResponder];
     
-    // Do any additional setup after loading the view.
+    //Para mostrar en la vista la informacion del usuario.
+    [self muestraInfoUsuario];
+    
+}
+
+//Metodo que llama a la BD para recoger la informacion del usuario logueado y mostrarla.
+-(void)muestraInfoUsuario{
+    //Inicializamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    
+    //Cogemos los datos del usuario de la BD.
+    NSArray* infoUsuario = [db getInfoUsuario:self.nicknameUsuario];
+    //Mostramos los datos del usuario en la vista.
+    self.tfNombre.text = [infoUsuario objectAtIndex:1];
+    self.tfApellidos.text = [infoUsuario objectAtIndex:2];
+    self.tfUsuario.text = [infoUsuario objectAtIndex:3];
+    self.tfPass.text = [infoUsuario objectAtIndex:4];
+    self.tfEmail.text = [infoUsuario objectAtIndex:5];
+    self.tfCiudad.text = [infoUsuario objectAtIndex:6];
+    self.tfFechaNac.text = [infoUsuario objectAtIndex:7];
+    
+    
+    
 }
 
 -(void)estiloInicial{

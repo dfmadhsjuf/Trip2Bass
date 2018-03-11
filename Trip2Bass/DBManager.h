@@ -27,5 +27,6 @@
 -(void) insertaEvento:(Eventos*) evento;
 -(NSMutableArray*) getInfo;
 -(BOOL) validarUsuario:(NSString*)usuario conPassword:(NSString*)password;
+-(NSArray*) getInfoUsuario:(NSString*)nickname;
 
 @end

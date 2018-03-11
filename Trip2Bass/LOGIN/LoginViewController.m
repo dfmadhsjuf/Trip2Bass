@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "EventosCollectionVC.h"
+#import "ModUserViewController.h"
 #import "DBManager.h"
 
 @interface LoginViewController ()
@@ -75,10 +76,16 @@
     if ([[segue identifier] isEqualToString:@"loguea"]) {
         
         UITabBarController *tabBarController = segue.destinationViewController;
+        //Le pasamos el nickanme a la lista de eventos.
         UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
         EventosCollectionVC *controller = (EventosCollectionVC *)[[navigationController viewControllers] objectAtIndex:0];
-        
         controller.username = self.tfUsername.text;
+        
+        //Le pasamos el nickanme a la informacion del usuario.
+        UINavigationController* navigationUser = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:2];
+        ModUserViewController* infoUsuario = (ModUserViewController*)[[navigationUser viewControllers] objectAtIndex:0];
+        infoUsuario.nicknameUsuario = self.tfUsername.text;
+        
     }
 }
 
