@@ -98,8 +98,6 @@
 //Metodo que recoge los eventos del usuario.
 -(NSMutableArray*)getEventosUsuario:(NSString*) nickname{
     
-    NSLog(@"Esto en el BD: %@", nickname);
-    
     //Nos creamos el array de Eventos.
     NSMutableArray* listaEventos = [[NSMutableArray alloc] init];
     
@@ -116,12 +114,13 @@
     }else{
         //Si se ha podido abrir la conexion empezamos.
         //Creamos la consulta SQL.
-        const char* sentenciaSQL = "SELECT titulo, area, fecha_inicio, fecha_fin, tipo, descripcion, musica, parking_tamaño, parking_accesibilidad, parking_terreno, ubicacion, indicaciones FROM eventos";
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"SELECT E.titulo, E.area, E.fecha_inicio, E.fecha_fin, E.tipo, O.nombre, E.descripcion, E.musica, E.parking_tamaño, E.parking_accesibilidad, E.parking_terreno, E.ubicacion, E.indicaciones FROM EVENTOS E, ORGANIZADORES O, INVITACIONES I, Usuarios U WHERE E.cod_organizador = O.cod_organizador AND E.cod_evento = I.cod_evento AND I.cod_usuario = U.cod_usuario AND U.nickname = \"%@\";", nickname];
+        
         //Creamos el statement.
         sqlite3_stmt* statement;
         
         //Realizamos la consulta.
-        if(sqlite3_prepare_v2(db, sentenciaSQL, -1, &statement, NULL) != SQLITE_OK){
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
             NSLog(@"Problema al preparar el statement de mostrarEventos: %s", sqlite3_errmsg(db));
         }else{
             //Si la consulta se ha ejecuta bien pues sacamos los datos y los cargamos en la lista de eventos.
@@ -132,13 +131,14 @@
                 evento.fechaInicio = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 2)];
                 evento.fechaFin = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 3)];
                 evento.tipo = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 4)];
-                evento.descripcion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 5)];
-                evento.musica = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 6)];
-                evento.parkingTamaño = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 7)];
-                evento.parkingAccesibilidad = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 8)];
-                evento.parkingTerreno = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 9)];
-                evento.ubicacion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 10)];
-                evento.indicaciones = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 11)];
+                evento.organizador = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 5)];
+                evento.descripcion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 6)];
+                evento.musica = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 7)];
+                evento.parkingTamaño = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 8)];
+                evento.parkingAccesibilidad = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 9)];
+                evento.parkingTerreno = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 10)];
+                evento.ubicacion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 11)];
+                evento.indicaciones = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 12)];
                 
                 //Añadimos el evento a la lista.
                 [listaEventos addObject:evento];

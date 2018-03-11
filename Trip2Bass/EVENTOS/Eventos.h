@@ -16,6 +16,7 @@
 @property NSString* fechaInicio; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
 @property NSString* fechaFin; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
 @property NSString* tipo;
+@property NSString* organizador;
 @property NSString* descripcion;
 @property NSString* musica;
 @property NSString* parkingTamaño;

@@ -14,8 +14,6 @@
 @interface EventosCollectionVC ()
 @property (strong, nonatomic) IBOutlet UICollectionView *cv_misEventos;
 
-
-
 @end
 
 @implementation EventosCollectionVC
