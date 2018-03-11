@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self configureView];
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +34,22 @@
     Eventos *evento = self.evento;
     if (evento) {
         [self.titulo setText:evento.titulo];
+        [self.inicio setText:evento.fechaInicio];
+        [self.fin setText:evento.fechaFin];
+        [self.tipo setText:evento.tipo];
+        [self.area setText:evento.area];
+        [self.contenidoEvento setText:evento.descripcion];
+        [self.accesibilidad setText:evento.parkingAccesibilidad];
+        [self.terreno setText:evento.parkingTerreno];
+        [self.parking setText:evento.parkingTamano];
+        [self.indicaciones setText:evento.indicaciones];
+        if ([self.tipo.text isEqualToString:@"Fiesta"]) {
+            [self.fotoEvento setImage:[UIImage imageNamed:@"fondo_evento1"]];
+            [self.labelContenidoEvento setText:@"MÚSICA"];
+        }else{
+            [self.fotoEvento setImage:[UIImage imageNamed:@"fondo_evento2"]];
+            [self.labelContenidoEvento setText:@"ACTIVIDADES"];
+        }
     }
 }
 

@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *parking;
 @property (weak, nonatomic) IBOutlet UIButton *ubicacion;
 @property (weak, nonatomic) IBOutlet UILabel *indicaciones;
+@property (weak, nonatomic) IBOutlet UILabel *labelContenidoEvento;
 
 //BOTONES
 @property (weak, nonatomic) IBOutlet UIButton *bComentar;

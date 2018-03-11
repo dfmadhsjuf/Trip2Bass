@@ -134,7 +134,7 @@
                 evento.organizador = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 5)];
                 evento.descripcion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 6)];
                 evento.musica = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 7)];
-                evento.parkingTamaño = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 8)];
+                evento.parkingTamano = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 8)];
                 evento.parkingAccesibilidad = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 9)];
                 evento.parkingTerreno = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 10)];
                 evento.ubicacion = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 11)];
@@ -181,7 +181,7 @@
               1,
               evento.descripcion,
               evento.musica,
-              evento.parkingTamaño,
+              evento.parkingTamano,
               evento.parkingAccesibilidad,
               evento.parkingTerreno,
               evento.ubicacion,

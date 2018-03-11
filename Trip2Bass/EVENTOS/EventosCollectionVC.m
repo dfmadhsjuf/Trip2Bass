@@ -61,13 +61,13 @@ UILabel* fechaLabel;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"pasaDatosEvento"]) {
         
-        //UITabBarController *tabBarController = segue.destinationViewController;
-        UINavigationController* navCont = segue.destinationViewController;
-        //UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
         DetalleEventoViewController *detalle = [segue destinationViewController];
-        
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+        Eventos * evento = [self.dataController.masterEventosList objectAtIndex:indexPath.row];
+        detalle.evento = evento;
     }
 }
+
 
 
 #pragma mark <UICollectionViewDataSource>
