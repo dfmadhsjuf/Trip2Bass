@@ -23,7 +23,7 @@
 
 -(id)initWithDatabaseFilename:(NSString*)dbFilename;
 -(void)copyDatabaseIntoDocumentsDirectory;
--(NSMutableArray*)getEventosUsuario;
+-(NSMutableArray*)getEventosUsuario:(NSString*) nickname;
 -(void) insertaEvento:(Eventos*) evento;
 -(NSMutableArray*) getInfo;
 -(BOOL) validarUsuario:(NSString*)usuario conPassword:(NSString*)password;

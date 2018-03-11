@@ -96,7 +96,10 @@
 }
 
 //Metodo que recoge los eventos del usuario.
--(NSMutableArray*)getEventosUsuario{
+-(NSMutableArray*)getEventosUsuario:(NSString*) nickname{
+    
+    NSLog(@"Esto en el BD: %@", nickname);
+    
     //Nos creamos el array de Eventos.
     NSMutableArray* listaEventos = [[NSMutableArray alloc] init];
     

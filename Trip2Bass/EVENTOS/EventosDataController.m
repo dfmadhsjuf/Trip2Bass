@@ -23,7 +23,7 @@
     //Inicialiamos la BD.
     DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
     //Cargamos los eventos en la lista de eventos.
-    self.masterEventosList = [db getEventosUsuario];
+    self.masterEventosList = [db getEventosUsuario:self.nicknameUsuario];
     
     //Segun el tipo de evento le asociamos una foto u otra
     for (int i = 0; i < [self.masterEventosList count]; i++) {
