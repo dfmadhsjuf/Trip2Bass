@@ -744,6 +744,15 @@
                             <outlet property="delegate" destination="aYP-Ga-PzG" id="O9z-bs-MvR"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems>
+                        <barButtonItem image="enviar" id="0jc-Gb-Xm8">
+                            <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="invitarUsuarios:" destination="aYP-Ga-PzG" id="GeW-e9-lRP"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="500"/>
                     <connections>
                         <outlet property="cv_usuarios" destination="qnf-og-LSL" id="Ftq-JG-pPJ"/>
@@ -751,7 +760,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzN-tG-PQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4913" y="3145"/>
+            <point key="canvasLocation" x="4913" y="3214"/>
         </scene>
         <!--NUEVO EVENTO-->
         <scene sceneID="LbZ-qw-rBW">
@@ -2574,6 +2583,7 @@
         <image name="ajustes" width="32" height="32"/>
         <image name="colectivo" width="32" height="32"/>
         <image name="edit_user" width="32" height="32"/>
+        <image name="enviar" width="32" height="32"/>
         <image name="eventos" width="32" height="32"/>
         <image name="fondo_evento1" width="649" height="333"/>
         <image name="fondo_evento2" width="474" height="304"/>

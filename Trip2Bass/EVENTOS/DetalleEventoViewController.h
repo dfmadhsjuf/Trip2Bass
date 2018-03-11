@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class Comentario;
+@class Eventos;
 
 @interface DetalleEventoViewController : UIViewController
 
+@property Eventos* evento;
 //DATOS EVENTO
 @property (weak, nonatomic) IBOutlet UIImageView *fotoEvento;
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
@@ -39,5 +41,7 @@
 
 //SCROLL
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
+
 
 @end

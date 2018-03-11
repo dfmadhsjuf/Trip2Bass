@@ -93,6 +93,11 @@ UIImageView* fotoUsuario;
     return cell;
 }
 
+//ENVIAR INVITACIONES
+-(IBAction)invitarUsuarios:(id)sender{
+    //CODIGO AÑADIR USUARIOS A TABLA INVITACIONES
+}
+
 #pragma mark <UICollectionViewDelegate>
 
 /*

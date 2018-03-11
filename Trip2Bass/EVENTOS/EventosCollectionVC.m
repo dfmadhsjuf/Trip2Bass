@@ -62,8 +62,7 @@ UILabel* fechaLabel;
         //UITabBarController *tabBarController = segue.destinationViewController;
         UINavigationController* navCont = segue.destinationViewController;
         //UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
-        DetalleEventoViewController *controller = (DetalleEventoViewController *)[[navCont viewControllers] objectAtIndex:0];
-        controller.titulo.text = tituloLabel.text;
+        DetalleEventoViewController *detalle = [segue destinationViewController];
         
     }
 }

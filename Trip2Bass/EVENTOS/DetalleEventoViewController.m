@@ -9,6 +9,7 @@
 #import "DetalleEventoViewController.h"
 #import "Comentario.h"
 #import "ComentariosCollectionVC.h"
+#import "Eventos.h"
 
 @interface DetalleEventoViewController ()
 
@@ -18,12 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)configureView
+{
+    // Update the user interface for the detail item.
+    Eventos *evento = self.evento;
+    if (evento) {
+        [self.titulo setText:evento.titulo];
+    }
 }
 
 - (IBAction)back:(UIStoryboard*)sender {
