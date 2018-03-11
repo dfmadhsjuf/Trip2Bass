@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E9A2DEA1CEC49A7EC6905E3D /* libPods-Trip2BassUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F62A21A7FDD525DB95E639 /* libPods-Trip2BassUITests.a */; };
-		EA02F47243D4C36D4411EB04 /* libPods-Trip2BassTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7712597A00D8708F076306A3 /* libPods-Trip2BassTests.a */; };
+		9647404B0231A96FB71DC198 /* libPods-Trip2Bass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C1E4929E02D53CA19EBDE5 /* libPods-Trip2Bass.a */; };
 		FB04A5122054345F00CAFAED /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04A5112054345F00CAFAED /* DBManager.m */; };
 		FB04A5152054347500CAFAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04A5142054347500CAFAED /* libsqlite3.tbd */; };
 		FB04A51D2054560000CAFAED /* Trip2Bass.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FB04A51C2054560000CAFAED /* Trip2Bass.sqlite */; };
@@ -52,13 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3359F033ADF997F6ABA1A1AD /* Pods-Trip2BassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip2BassUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trip2BassUITests/Pods-Trip2BassUITests.release.xcconfig"; sourceTree = "<group>"; };
-		451995ACA5D3E110B1F0626A /* Pods-Trip2BassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip2BassUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trip2BassUITests/Pods-Trip2BassUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		691B7DAA0C333DDB8E1ED00A /* Pods-Trip2Bass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip2Bass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trip2Bass/Pods-Trip2Bass.debug.xcconfig"; sourceTree = "<group>"; };
 		7712597A00D8708F076306A3 /* libPods-Trip2BassTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trip2BassTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F62A21A7FDD525DB95E639 /* libPods-Trip2BassUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trip2BassUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5F2732DE49747A6A844DEA /* Pods-Trip2Bass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip2Bass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trip2Bass/Pods-Trip2Bass.release.xcconfig"; sourceTree = "<group>"; };
-		E29DB7CB53CB947BD03E8787 /* Pods-Trip2BassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip2BassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trip2BassTests/Pods-Trip2BassTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8C1E4929E02D53CA19EBDE5 /* libPods-Trip2Bass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trip2Bass.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB04A5102054345F00CAFAED /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		FB04A5112054345F00CAFAED /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
@@ -104,7 +100,6 @@
 		FB8F447F203F7EA900AA416C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FBB65FC1205474D70084D2D9 /* MapsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
 		FBB65FC2205474D70084D2D9 /* MapsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
-		FCB7B872198BBFEE41D1C711 /* Pods-Trip2BassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip2BassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trip2BassTests/Pods-Trip2BassTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB04A5152054347500CAFAED /* libsqlite3.tbd in Frameworks */,
+				9647404B0231A96FB71DC198 /* libPods-Trip2Bass.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA02F47243D4C36D4411EB04 /* libPods-Trip2BassTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A2DEA1CEC49A7EC6905E3D /* libPods-Trip2BassUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +134,6 @@
 			children = (
 				691B7DAA0C333DDB8E1ED00A /* Pods-Trip2Bass.debug.xcconfig */,
 				AC5F2732DE49747A6A844DEA /* Pods-Trip2Bass.release.xcconfig */,
-				FCB7B872198BBFEE41D1C711 /* Pods-Trip2BassTests.debug.xcconfig */,
-				E29DB7CB53CB947BD03E8787 /* Pods-Trip2BassTests.release.xcconfig */,
-				451995ACA5D3E110B1F0626A /* Pods-Trip2BassUITests.debug.xcconfig */,
-				3359F033ADF997F6ABA1A1AD /* Pods-Trip2BassUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -318,12 +308,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB882278203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2BassTests" */;
 			buildPhases = (
-				7D2810B16F8AE039E3CB8E57 /* [CP] Check Pods Manifest.lock */,
 				FB88225D203D619D0094B9B2 /* Sources */,
 				FB88225E203D619D0094B9B2 /* Frameworks */,
 				FB88225F203D619D0094B9B2 /* Resources */,
-				6372474497177F4214B1D65D /* [CP] Embed Pods Frameworks */,
-				B37E2CC2C27DF667F1373DC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,12 +326,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB88227B203D619D0094B9B2 /* Build configuration list for PBXNativeTarget "Trip2BassUITests" */;
 			buildPhases = (
-				46CE5D50EDEA49952584B6D4 /* [CP] Check Pods Manifest.lock */,
 				FB882268203D619D0094B9B2 /* Sources */,
 				FB882269203D619D0094B9B2 /* Frameworks */,
 				FB88226A203D619D0094B9B2 /* Resources */,
-				0CE99B88B9400038B4576B1A /* [CP] Embed Pods Frameworks */,
-				C833E65F9BD942BE9A1AC2D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,21 +414,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CE99B88B9400038B4576B1A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trip2BassUITests/Pods-Trip2BassUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		37493213AD5C4B744EDBAC85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,100 +447,26 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trip2Bass/Pods-Trip2Bass-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		46CE5D50EDEA49952584B6D4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Trip2BassUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6372474497177F4214B1D65D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trip2BassTests/Pods-Trip2BassTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D2810B16F8AE039E3CB8E57 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Trip2BassTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8EE2E56587BDB57ABCA5B0B3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Trip2Bass/Pods-Trip2Bass-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trip2Bass/Pods-Trip2Bass-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B37E2CC2C27DF667F1373DC1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trip2BassTests/Pods-Trip2BassTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C833E65F9BD942BE9A1AC2D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trip2BassUITests/Pods-Trip2BassUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBB2C5A82054B18600CD6929 /* ShellScript */ = {
@@ -798,7 +693,6 @@
 		};
 		FB882279203D619D0094B9B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCB7B872198BBFEE41D1C711 /* Pods-Trip2BassTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -813,7 +707,6 @@
 		};
 		FB88227A203D619D0094B9B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E29DB7CB53CB947BD03E8787 /* Pods-Trip2BassTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -828,7 +721,6 @@
 		};
 		FB88227C203D619D0094B9B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 451995ACA5D3E110B1F0626A /* Pods-Trip2BassUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Trip2BassUITests/Info.plist;
@@ -842,7 +734,6 @@
 		};
 		FB88227D203D619D0094B9B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3359F033ADF997F6ABA1A1AD /* Pods-Trip2BassUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Trip2BassUITests/Info.plist;

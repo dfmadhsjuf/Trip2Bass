@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapsViewController : UIViewController
+@interface MapsViewController : UIViewController <GMSMapViewDelegate, UIGestureRecognizerDelegate>
+
+-(void)mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end

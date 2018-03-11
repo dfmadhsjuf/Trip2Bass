@@ -6,6 +6,7 @@
 //  Copyright © 2018 Self. All rights reserved.
 //
 
+@import GoogleMaps;
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //CLAVE API GOOGLE MAPS
+    [GMSServices provideAPIKey:@"AIzaSyA2bPy7lG-Z2EAIm6JCZhQpKQz4vCD1sY8"];
+    //si queremos utilizar tambien places API
+    //[GMSPlacesClient provideAPIKey:@"AIzaSyA2bPy7lG-Z2EAIm6JCZhQpKQz4vCD1sY8"];
     
     //NSLog(@"app dir: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
     

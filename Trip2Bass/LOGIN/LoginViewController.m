@@ -43,6 +43,8 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //Inicializamos la BD.
     DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
@@ -64,6 +66,23 @@
         NSLog(@"No se encuentra el usuario");
     }
 }
+*/
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    //Inicializamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    //Recogemos el usuario y la contraseña de los TextField.
+    NSString* usuario = self.tfUsername.text;
+    NSString* password = self.tfPassword.text;
+    
+    //Comprobamos si el usuario existe en la BD.
+    if([db validarUsuario:usuario conPassword:password]){
+        NSLog(@"validado y entramos");
+        return YES;
+    }else{
+        NSLog(@"No se encuentra el usuario");
+        return NO;
+    }
+}
 
 @end
