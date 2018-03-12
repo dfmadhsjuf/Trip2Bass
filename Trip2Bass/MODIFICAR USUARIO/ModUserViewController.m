@@ -59,6 +59,7 @@
     self.tfEmail.text = [infoUsuario objectAtIndex:5];
     self.tfCiudad.text = [infoUsuario objectAtIndex:6];
     self.tfFechaNac.text = [infoUsuario objectAtIndex:7];
+    self.tfTelefono.text = @"664198537";
     
     //Cogemos los datos del coche del usuario si este tiene.
     NSArray* infoCoche = [db getInfoCoche:[infoUsuario objectAtIndex:0]];
