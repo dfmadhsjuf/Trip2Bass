@@ -60,8 +60,23 @@
     self.tfEmail.text = [infoUsuario objectAtIndex:5];
     self.tfCiudad.text = [infoUsuario objectAtIndex:6];
     self.tfFechaNac.text = [infoUsuario objectAtIndex:7];
+    self.tfTelefono.text = @"664198537";
     
+    //Cogemos los datos del coche del usuario si este tiene.
+    NSArray* infoCoche = [db getInfoCoche:[infoUsuario objectAtIndex:0]];
     
+    //Comprobamos si el usario tiene coche.
+    if([infoCoche count] == 0){
+        [self.swCoche setOn:false];
+        [self switchValueChanged];
+    } else{
+        //Si tiene coche mostramos sus datos.
+        [self.swCoche setOn:true];
+        self.tfMarca.text = [infoCoche objectAtIndex:0];
+        self.tfModelo.text = [infoCoche objectAtIndex:1];
+        self.tfPlazas.text = [infoCoche objectAtIndex:2];
+        self.tfColor.text = [infoCoche objectAtIndex:3];
+    }
     
 }
 
