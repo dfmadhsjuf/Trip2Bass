@@ -29,5 +29,7 @@
 -(BOOL) validarUsuario:(NSString*)usuario conPassword:(NSString*)password;
 -(NSArray*) getInfoUsuario:(NSString*)nickname;
 -(NSArray*) getInfoCoche:(NSNumber*)codUsuario;
+-(int) insertaUsuario:(NSArray*) usuario;
+-(BOOL) insertaCoche:(NSArray*) datosCoche;
 
 @end

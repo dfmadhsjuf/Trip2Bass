@@ -369,4 +369,117 @@
     return infoCoche;
 }
 
+//Metodo que inserta un usuario en la BD.
+-(int) insertaUsuario:(NSArray*) usuario{
+    
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"INSERT INTO USUARIOS (\"nombre\", \"apellidos\", \"nickname\", \"password\", \"email\", \"provincia\", \"fecha_nacimiento\") VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\");",
+                                  [usuario objectAtIndex:0],
+                                  [usuario objectAtIndex:1],
+                                  [usuario objectAtIndex:2],
+                                  [usuario objectAtIndex:3],
+                                  [usuario objectAtIndex:4],
+                                  [usuario objectAtIndex:5],
+                                  [usuario objectAtIndex:6]];
+        
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de insertar usuario: %s", sqlite3_errmsg(db));
+        }else{
+            //Comprobamos si se ha ejecutado bien la inserccion del usuario.
+            if(sqlite3_step(statement) != SQLITE_DONE){
+                NSLog(@"DB Error: %s", sqlite3_errmsg(db));
+                //Quitamos el statement de memoria.
+                sqlite3_finalize(statement);
+                //Cerramos la conexion con la BD.
+                sqlite3_close(db);
+                //Devolvemos -1 si falla la insercion del usuario.
+                return -1;
+            } else{
+                //Si se ha ejecutado bien guardamos la fila afectada y el ID del ultimo usuario insertado.
+                self.affectedRows = sqlite3_changes(db);
+                self.lastInsertedRowID = sqlite3_last_insert_rowid(db);
+            }
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
+    
+    return (int)self.lastInsertedRowID;
+}
+
+//Metodo que inserta un coche asociado a un usuario en la BD.
+-(BOOL) insertaCoche:(NSArray*) datosCoche{
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"INSERT INTO COCHES (\"cod_usuario\", \"marca\", \"modelo\", \"plazas\", \"color\") VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\");",
+                                  [datosCoche objectAtIndex:0],
+                                  [datosCoche objectAtIndex:1],
+                                  [datosCoche objectAtIndex:2],
+                                  [datosCoche objectAtIndex:3],
+                                  [datosCoche objectAtIndex:4]];
+        
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de insertar coche: %s", sqlite3_errmsg(db));
+        }else{
+            //Comprobamos si se ha ejecutado bien la inserccion del coche.
+            if(sqlite3_step(statement) != SQLITE_DONE){
+                NSLog(@"DB Error: %s", sqlite3_errmsg(db));
+                //Quitamos el statement de memoria.
+                sqlite3_finalize(statement);
+                //Cerramos la conexion con la BD.
+                sqlite3_close(db);
+                //Devolvemos false.
+                return false;
+            } else{
+                //Si se ha ejecutado bien guardamos la fila afectada y el ID del ultimo usuario insertado.
+                self.affectedRows = sqlite3_changes(db);
+                self.lastInsertedRowID = sqlite3_last_insert_rowid(db);
+                //Quitamos el statement de memoria.
+                sqlite3_finalize(statement);
+                //Cerramos la conexion con la BD.
+                sqlite3_close(db);
+                //Devolvemos true.
+                return true;
+            }
+        }
+
+    }
+    
+    return false;
+}
+
 @end

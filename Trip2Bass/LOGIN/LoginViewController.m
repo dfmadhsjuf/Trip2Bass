@@ -46,29 +46,35 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    //Inicializamos la BD.
-    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
-    //Recogemos el usuario y la contraseña de los TextField.
-    NSString* usuario = self.tfUsername.text;
-    NSString* password = self.tfPassword.text;
     
-    //Comprobamos si el usuario existe en la BD.
-    if([db validarUsuario:usuario conPassword:password]){
-        //Si existe mandamos el prepareForSegue y mostramos la siguiente vista.
-        [self performSegueWithIdentifier:@"loguea" sender:sender];
-        return YES;
-    }else{
+   //Comprobamos si se ha apretado el boton de Sign In.
+    if([identifier isEqualToString:@"loguea"]){
+        //Inicializamos la BD.
+        DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+        //Recogemos el usuario y la contraseña de los TextField.
+        NSString* usuario = self.tfUsername.text;
+        NSString* password = self.tfPassword.text;
         
-        //ALERTA DE USUARIO NO ENCONTRADO
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Usuario o contraseña incorrectos" message:@"Si no tienes una cuenta createla apretando el boton de Sign Up" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Cerrar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        
-        return NO;
+        //Comprobamos si el usuario existe en la BD.
+        if([db validarUsuario:usuario conPassword:password]){
+            //Si existe mandamos el prepareForSegue y mostramos la siguiente vista.
+            [self performSegueWithIdentifier:@"loguea" sender:sender];
+            return YES;
+        }else{
+            
+            //ALERTA DE USUARIO NO ENCONTRADO
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Usuario o contraseña incorrectos" message:@"Si no tienes una cuenta createla apretando el boton de Sign Up" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Cerrar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            return NO;
+        }
     }
+    
+    return YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
