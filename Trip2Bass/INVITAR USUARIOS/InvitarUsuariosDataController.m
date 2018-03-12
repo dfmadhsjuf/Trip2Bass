@@ -20,17 +20,11 @@
 -(void) initializeDefaultDataList{
     //Inicializamos la lista de los eventos.
     _masterInvitacionList =  [[NSMutableArray alloc] init];
-    Usuarios* user =  [[Usuarios alloc]initWithNombre:@"Pepe" usuario:@"Pepe89"];
-    [self addUsuario:user];
-    Usuarios* user1 = [[Usuarios alloc]initWithNombre:@"Jonathan" usuario:@"Proview1996"];
-    [self.masterInvitacionList addObject:user1];
-    Usuarios* user2 = [[Usuarios alloc]initWithNombre:@"Noelia" usuario:@"Noetsai"];
-    [self.masterInvitacionList addObject:user2];
     
     //Inicialiamos la BD.
-    //DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
     //Cargamos los usuarios que hay la bd.
-    //self.masterInvitacionList = [db getEventosUsuario];
+    self.masterInvitacionList = [db getUsuarios];
     
 }
 
