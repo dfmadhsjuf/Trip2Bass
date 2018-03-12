@@ -10,9 +10,11 @@
 #import "Eventos.h"
 #import "EventosDataController.h"
 #import "DetalleEventoViewController.h"
+#import "DBManager.h"
 
 @interface EventosCollectionVC ()
 @property (strong, nonatomic) IBOutlet UICollectionView *cv_misEventos;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bCrearEvento;
 
 @end
 
@@ -41,6 +43,18 @@ UILabel* fechaLabel;
     
     //Inicializamos el dataController y le pasamos el nickname.
     self.dataController = [[EventosDataController alloc] initWhitNickname:self.username];
+    
+    //Inicialiamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    
+    //Comprobamos si el usuario es miembro de algun grupo de organizadores.
+    if([db compruebaOrganizadorConNickname:self.username]){
+        //Si es organizador habilitamos el boton de crear Eventos.
+        [self.bCrearEvento setEnabled:true];
+    }else{
+        //Si NO es organizador deshabilitamos el boton de crear Eventos.
+        [self.bCrearEvento setEnabled:false];
+    }
 
 }
 

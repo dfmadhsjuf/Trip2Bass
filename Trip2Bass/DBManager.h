@@ -32,5 +32,6 @@
 -(int) insertaUsuario:(NSArray*) usuario;
 -(BOOL) insertaCoche:(NSArray*) datosCoche;
 -(NSMutableArray*) getComentariosEvento:(NSNumber*) codEvento;
+-(BOOL) compruebaOrganizadorConNickname:(NSString*)nickname;
 
 @end

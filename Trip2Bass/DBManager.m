@@ -534,4 +534,50 @@
     return listaComentarios;
 }
 
+//Metodo que comprueba si el usuario logueado es miembro de algun grupo de organizadores.
+-(BOOL) compruebaOrganizadorConNickname:(NSString*)nickname{
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"SELECT M.cod_organizador, M.cod_usuario FROM USUARIOS U, MIEMBROS M WHERE U.cod_usuario = M.cod_usuario AND U.nickname = \"%@\";", nickname];
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de compruebaOrganizador: %s", sqlite3_errmsg(db));
+        }else{
+            //Comprobamos si el usuario es miembro de algun grupo de organizadores.
+            if(sqlite3_step(statement) == SQLITE_ROW){
+                
+                //Quitamos el statement de memoria.
+                sqlite3_finalize(statement);
+                
+                //Cerramos la conexion con la BD.
+                sqlite3_close(db);
+                
+                return true;
+            }
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
+    
+    return false;
+}
+
 @end

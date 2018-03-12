@@ -688,6 +688,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bCrearEvento" destination="alm-qX-Wpd" id="xCf-WP-hW8"/>
                         <outlet property="cv_misEventos" destination="UBX-XA-RaY" id="UfU-AA-E4g"/>
                     </connections>
                 </collectionViewController>
