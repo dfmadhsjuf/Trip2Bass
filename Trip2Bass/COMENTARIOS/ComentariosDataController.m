@@ -12,20 +12,19 @@
 
 @interface ComentariosDataController()
 -(void) initializeDefaultDataList;
+
+@property NSNumber* codEvento;
 @end
 
 @implementation ComentariosDataController
 -(void) initializeDefaultDataList{
+    
     //Inicializamos la lista de los eventos.
     _masterComentariosList =  [[NSMutableArray alloc] init];
-    Comentario* comentario =  [[Comentario alloc]initWithUsuario:@"proview1996" tipo:@"controles" contenido:@"Hay control en la rotonda"];
-    [self addComentario:comentario];
-    Comentario* comentario2 = [[Comentario alloc]initWithUsuario:@"proview1996" tipo:@"ayuda" contenido:@"Puedo aportar equipo"];
-    [self addComentario:comentario2];
     //Inicialiamos la BD.
-    //DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
-    //Cargamos los usuarios que hay la bd.
-    //self.masterInvitacionList = [db getEventosUsuario];
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    //Cargamos los comentarios del evento.
+    self.masterComentariosList = [db getComentariosEvento:self.codEvento];
     
 }
 
@@ -35,9 +34,10 @@
     }
 }
 
-- (id)init {
+- (id)initWhitCodEvento:(NSNumber*)codigoEvento {
     
     if (self = [super init]) {
+        self.codEvento = codigoEvento;
         [self initializeDefaultDataList];
         return self;
     }

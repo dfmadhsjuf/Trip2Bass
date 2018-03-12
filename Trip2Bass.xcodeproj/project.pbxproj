@@ -18,7 +18,7 @@
 		FB3840A2204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3840A1204FE03A00471ADB /* InformacionCollectionViewCollectionViewController.m */; };
 		FB3840A5204FE08600471ADB /* InformacionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3840A4204FE08600471ADB /* InformacionDataController.m */; };
 		FB3840A8204FE17000471ADB /* Informacion.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3840A7204FE17000471ADB /* Informacion.m */; };
-		FB3CD3652055DF7100BCA42A /* Trip2Bass.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FB3CD3642055DF7000BCA42A /* Trip2Bass.sqlite */; };
+		FB3CD3672056297800BCA42A /* Trip2Bass.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FB3CD3662056297800BCA42A /* Trip2Bass.sqlite */; };
 		FB4986732049491E005D71B9 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4986722049491E005D71B9 /* AddEventViewController.m */; };
 		FB70912A203EC9F500A68D5B /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB709129203EC9F500A68D5B /* AddUserViewController.m */; };
 		FB70912D203ED08600A68D5B /* ModUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70912C203ED08600A68D5B /* ModUserViewController.m */; };
@@ -83,7 +83,7 @@
 		FB3840A4204FE08600471ADB /* InformacionDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformacionDataController.m; sourceTree = "<group>"; };
 		FB3840A6204FE17000471ADB /* Informacion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Informacion.h; sourceTree = "<group>"; };
 		FB3840A7204FE17000471ADB /* Informacion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Informacion.m; sourceTree = "<group>"; };
-		FB3CD3642055DF7000BCA42A /* Trip2Bass.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trip2Bass.sqlite; sourceTree = "<group>"; };
+		FB3CD3662056297800BCA42A /* Trip2Bass.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trip2Bass.sqlite; sourceTree = "<group>"; };
 		FB4986712049491E005D71B9 /* AddEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
 		FB4986722049491E005D71B9 /* AddEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		FB709128203EC9F500A68D5B /* AddUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		FB88224B203D619D0094B9B2 /* Trip2Bass */ = {
 			isa = PBXGroup;
 			children = (
-				FB3CD3642055DF7000BCA42A /* Trip2Bass.sqlite */,
+				FB3CD3662056297800BCA42A /* Trip2Bass.sqlite */,
 				FB2F7DCD20520D4A0005FE9F /* AJUSTES */,
 				FB6A47082051A63D00E75AF1 /* REGISTRAR USUARIO */,
 				FB6A47072051A63B00E75AF1 /* MODIFICAR USUARIO */,
@@ -456,7 +456,7 @@
 			files = (
 				FB882259203D619D0094B9B2 /* LaunchScreen.storyboard in Resources */,
 				FB882256203D619D0094B9B2 /* Assets.xcassets in Resources */,
-				FB3CD3652055DF7100BCA42A /* Trip2Bass.sqlite in Resources */,
+				FB3CD3672056297800BCA42A /* Trip2Bass.sqlite in Resources */,
 				FB882254203D619D0094B9B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

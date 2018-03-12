@@ -32,20 +32,15 @@ UILabel* contenido;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    
+    self.dataController = [[ComentariosDataController alloc] initWhitCodEvento:self.codigoEvento];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
--(void)awakeFromNib{
-    [super awakeFromNib];
-    self.dataController = [[ComentariosDataController alloc] init];
-}
-
-
 
 /*
 #pragma mark - Navigation

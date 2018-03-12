@@ -19,4 +19,6 @@
 -(Comentario*) objectInListAtIndex:(NSUInteger)theIndex;
 -(void) addComentario:(Comentario*) comentario;
 
+- (id)initWhitCodEvento:(NSNumber*)codigoEvento;
+
 @end

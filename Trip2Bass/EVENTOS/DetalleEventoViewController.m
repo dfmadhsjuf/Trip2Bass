@@ -102,7 +102,10 @@
         
     }
     if ([segue.identifier isEqualToString:@"crearComentario"]){
-        NSLog(@"Se ejecutan los comentarios");
+        //Le pasamos a los comentarios el cod_evento del evento actual.
+        Eventos *eventoCom = self.evento;
+        ComentariosCollectionVC* comentarioCV = [segue destinationViewController];
+        comentarioCV.codigoEvento = eventoCom.codEvento;
     }
 }
 
