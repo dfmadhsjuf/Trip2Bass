@@ -160,9 +160,13 @@
     //Nos creamos un evento con los datos de la vista y el codigo del organizador al que pertenece el usuario logueado.
     Eventos* evento = [[Eventos alloc] initWhitTitulo:titulo conArea:area conFechaInicio:fechaInicio conFechaFin:fechaFin conTipo:tipo conDescripcion:descripcion conMusica:musica conParkingTamano:parkingTamaño conParkingAccesibilidad:parkingAccesibilidad conParkingTerreno:parkingTerreno conUbicacion:ubicacion conIndicaciones:indicaciones conCodigoOrganizador:[infoOrganizador objectAtIndex:0] yFoto:foto];
     
-    //Llamamos al metodo para meter el Evento en la BD.
-    [db insertaEvento:evento];
+    //Llamamos al metodo para meter el Evento en la BD y recogemos el codigo de evento que acaba de crear.
+    NSNumber* codigoEvento = [db insertaEvento:evento];
+    //Sacamos el cod_usuario del usuario que se ha logueado y ha creado el evento.
+    NSNumber* codigoUsuario = [db sacaIdUsuarioConNickname:self.nicknameUsuario];
     
+    //Insertamos una nueva invitacion en la tabla invitaciones con el evento que acabamos de crear y el usuario que la ha creado.
+    [db insertaInvitacionConCodEvento:codigoEvento yCodUsuario:codigoUsuario];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

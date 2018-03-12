@@ -25,7 +25,7 @@
 -(id)initWithDatabaseFilename:(NSString*)dbFilename;
 -(void)copyDatabaseIntoDocumentsDirectory;
 -(NSMutableArray*)getEventosUsuario:(NSString*) nickname;
--(void) insertaEvento:(Eventos*) evento;
+-(NSNumber*) insertaEvento:(Eventos*) evento;
 -(NSMutableArray*) getInfo;
 -(BOOL) validarUsuario:(NSString*)usuario conPassword:(NSString*)password;
 -(NSArray*) getInfoUsuario:(NSString*)nickname;
@@ -38,5 +38,6 @@
 -(NSArray*) getInfoOrganizadoresConNickname:(NSString*) nickname;
 -(NSNumber*) sacaIdUsuarioConNickname:(NSString*) nickname;
 -(void) creaComentario:(Comentario*) comentario;
+-(void) insertaInvitacionConCodEvento:(NSNumber*)codigoEvento yCodUsuario:(NSNumber*)codigoUsuario;
 
 @end

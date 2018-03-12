@@ -160,7 +160,7 @@
 }
 
 //Metodo que inserta un evento en la BD.
--(void) insertaEvento:(Eventos*) evento{
+-(NSNumber*) insertaEvento:(Eventos*) evento{
     
     //Creamos el objeto sqlite.
     sqlite3* db;
@@ -211,6 +211,9 @@
     }
     //Cerramos la conexion con la BD.
     sqlite3_close(db);
+    
+    //Devolvemos el cod_evento del evento que se acaba de crear.
+    return [NSNumber numberWithLong:self.lastInsertedRowID];
 }
 
 //Metodo que devuelve la todas las filas de la tabla info.
@@ -772,6 +775,51 @@
     //Cerramos la conexion con la BD.
     sqlite3_close(db);
     
+}
+
+//Metodo que mete mete una invitacion en la BD.
+-(void) insertaInvitacionConCodEvento:(NSNumber*)codigoEvento yCodUsuario:(NSNumber*)codigoUsuario{
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"INSERT INTO INVITACIONES (\"cod_evento\", \"cod_usuario\") VALUES (\"%@\", \"%@\");", codigoEvento, codigoUsuario];
+        
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de insertaInvitaciones: %s", sqlite3_errmsg(db));
+        }else{
+            //Comprobamos si se ha ejecutado bien la inserccion de la invitacion.
+            if(sqlite3_step(statement) != SQLITE_DONE){
+                NSLog(@"DB Error: %s", sqlite3_errmsg(db));
+                //Quitamos el statement de memoria.
+                sqlite3_finalize(statement);
+                //Cerramos la conexion con la BD.
+                sqlite3_close(db);
+            } else{
+                //Si se ha ejecutado bien guardamos la fila afectada y el ID de la ultima invitacion insertada.
+                self.affectedRows = sqlite3_changes(db);
+                self.lastInsertedRowID = sqlite3_last_insert_rowid(db);
+            }
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
 }
 
 @end
