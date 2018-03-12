@@ -33,6 +33,7 @@
 {
     // Update the user interface for the detail item.
     Eventos *evento = self.evento;
+    
     if (evento) {
         [self.titulo setText:evento.titulo];
         [self.inicio setText:evento.fechaInicio];

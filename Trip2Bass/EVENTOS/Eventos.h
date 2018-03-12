@@ -11,6 +11,7 @@
 @interface Eventos : NSObject
 
 //PROPIEDADES DE UN EVENTO
+@property NSNumber* codEvento;
 @property NSString* titulo;
 @property NSString* area;
 @property NSString* fechaInicio; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
