@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@import GoogleMaps;
+@import GooglePlaces;
 
 @interface MapsViewController : UIViewController <GMSMapViewDelegate, UIGestureRecognizerDelegate>
+@property NSString* coordenadasString;
 
 -(void)mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate;
 

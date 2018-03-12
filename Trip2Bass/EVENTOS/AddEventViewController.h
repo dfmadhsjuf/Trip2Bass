@@ -31,7 +31,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *bInvitar;
 
 
-//POPUP INVITAR
-@property (strong, nonatomic) IBOutlet UIView *popup;
+//LABELS
+@property (strong, nonatomic) IBOutlet UILabel *labelAcceso;
+@property (strong, nonatomic) IBOutlet UILabel *labelCotenido;
+@property (strong, nonatomic) IBOutlet UILabel *labelParking;
+@property (strong, nonatomic) IBOutlet UILabel *labelTerreno;
+@property (strong, nonatomic) IBOutlet UILabel *labelUbicacion;
+@property (strong, nonatomic) IBOutlet UILabel *labelIndicaciones;
+
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 @end

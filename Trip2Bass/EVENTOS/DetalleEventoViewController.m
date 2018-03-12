@@ -10,6 +10,7 @@
 #import "Comentario.h"
 #import "ComentariosCollectionVC.h"
 #import "Eventos.h"
+#import "MapsViewController.h"
 
 @interface DetalleEventoViewController ()
 
@@ -38,7 +39,7 @@
         [self.fin setText:evento.fechaFin];
         [self.tipo setText:evento.tipo];
         [self.area setText:evento.area];
-        [self.contenidoEvento setText:evento.descripcion];
+        [self.organizador setText:evento.organizador];
         [self.accesibilidad setText:evento.parkingAccesibilidad];
         [self.terreno setText:evento.parkingTerreno];
         [self.parking setText:evento.parkingTamano];
@@ -46,11 +47,24 @@
         if ([self.tipo.text isEqualToString:@"Fiesta"]) {
             [self.fotoEvento setImage:[UIImage imageNamed:@"fondo_evento1"]];
             [self.labelContenidoEvento setText:@"MÚSICA"];
+            [self.contenidoEvento setText:evento.musica];
         }else{
             [self.fotoEvento setImage:[UIImage imageNamed:@"fondo_evento2"]];
             [self.labelContenidoEvento setText:@"ACTIVIDADES"];
+            [self.contenidoEvento setText:evento.descripcion];
         }
     }
+    [self setEstilo];
+}
+
+-(void)setEstilo{
+    NSArray* labels = [[NSArray alloc]initWithObjects:self.titulo, self.labelInicio, self.labelFin, self.labelArea, self.labelTipo, self.labelOrganizador, self.labelContenidoEvento, self.labelAcceso, self.labelParking, self.labelTerreno, self.labelUbicacion, self.labelIndicaciones, self.labelComentario, nil];
+    for (int i = 0; i<[labels count]; i++) {
+        UILabel* l = labels[i];
+        l.layer.cornerRadius = 3;
+        l.clipsToBounds = YES;
+    }
+    
 }
 
 - (IBAction)back:(UIStoryboard*)sender {
@@ -80,17 +94,13 @@
     
 }
 
-/**
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"crearComentario"]&& self.comentario != nil) {
-            ComentariosCollectionVC* cv_comentarios = segue.destinationViewController;
-        
-            [cv_comentarios addNuevoComentario:self.comentario];
-            [cv_comentarios refreshData];
+    if ([segue.identifier isEqualToString:@"muestraUbicacion"]){
+        MapsViewController* mapadestino = [segue destinationViewController];
+        mapadestino.coordenadasString = self.evento.ubicacion;
         
     }
 }
-*/
 
 /*
 #pragma mark - Navigation

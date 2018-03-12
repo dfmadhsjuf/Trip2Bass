@@ -32,6 +32,10 @@
     [self.tfUsername becomeFirstResponder];
     [self.tfUsername resignFirstResponder] ;
     
+    //texto tipo password
+    self.tfPassword.secureTextEntry = YES;
+
+    
     
     
 }

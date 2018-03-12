@@ -22,8 +22,12 @@
     [super viewDidLoad];
     //CREACION MAPA
     //creamos la camara con latitud y longitud de la ubicacion que queremos
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.4654028
-                                                            longitude:-0.3428401
+    NSArray* ubicacion = [self.coordenadasString componentsSeparatedByString:@","];
+    NSLog(@"%@", self.coordenadasString);
+    float coorx = [ubicacion[0] floatValue];
+    float coory = [ubicacion[1] floatValue];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:coorx
+                                                            longitude:coory
                                                                  zoom:17];
     //iniciamos el mapa con el centro en la camara definida arriba
     self.mimapa = [GMSMapView mapWithFrame:CGRectZero camera:camera];
@@ -31,7 +35,7 @@
     //creamos marcador
     self.marker = [[GMSMarker alloc] init];
     self.marker.position = camera.target;
-    self.marker.snippet = @"Hello World";
+    self.marker.snippet = [NSString stringWithFormat:@"CoordX:%f, CoordY:%f", coorx, coory];
     [self.marker setAppearAnimation:kGMSMarkerAnimationPop];
     [self.marker setMap:self.mimapa];
     [self setView:self.mimapa];

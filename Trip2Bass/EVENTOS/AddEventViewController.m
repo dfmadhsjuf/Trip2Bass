@@ -19,12 +19,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self eligeImagenEvento];
+    [self setEstilo];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setEstilo{
+    //TEXT FIELDS
+    NSMutableArray* textfields = [[NSMutableArray alloc]initWithObjects:self.tfTituloEvento, self.tfFechaInicioEvento, self.tfFechaFinEvento, self.tfAreaEvento, self.tfOrganizador, self.tfContenidoEvento, self.tfAcceso, self.tfParking, self.tfTerreno, self.tfIndicaciones, nil];
+    for (int i = 0; i < [textfields count]; i++) {
+        UITextField* tf = textfields[i];
+        tf.layer.cornerRadius = 3;
+        tf.clipsToBounds = YES;
+        tf.backgroundColor = [UIColor whiteColor];
+    }
+    //LABELS
+    NSArray* labels = [[NSArray alloc]initWithObjects:self.labelParking, self.labelTerreno, self.labelUbicacion, self.labelIndicaciones,self.labelAcceso, self.labelCotenido, nil];
+    for (int i = 0; i < [labels count]; i++) {
+        UILabel* l = labels[i];
+        l.layer.cornerRadius = 3;
+        l.clipsToBounds = YES;
+    }
+    
+    //TEXTAREAS
+    [self.tfContenidoEvento setClipsToBounds:YES];
+    [self.tfContenidoEvento.layer setCornerRadius:5];
+    [self.tfIndicaciones setClipsToBounds:YES];
+    [self.tfIndicaciones.layer setCornerRadius:5];
+    
+    //SC
+    self.ScTipoEvento.layer.cornerRadius = 5;
+    self.ScTipoEvento.clipsToBounds = YES;
+    
+    //BUTTON
+    self.bInvitar.layer.cornerRadius = 5;
+    self.bInvitar.clipsToBounds = YES;
+    
 }
 
 -(void)eligeImagenEvento{
@@ -38,9 +72,9 @@
 -(IBAction) SCValueChanged{
     [self eligeImagenEvento];
     if ([self.ScTipoEvento selectedSegmentIndex] == 0) {
-        [self.tfContenidoEvento setText:@"ACTIVIDAES"];
+        [self.labelCotenido setText:@"ACTIVIDADES"];
     }else {
-        [self.tfContenidoEvento setText:@"MÚSICA"];
+        [self.labelCotenido setText:@"MÚSICA"];
     }
 }
 
@@ -56,22 +90,10 @@
 
 //ACCION BOTON ENVIAR
 - (IBAction)invitar:(id)sender {
-    //popup
-    [self.popup.layer setCornerRadius:5];
-    [self.view addSubview:self.popup];
-    [self.popup setCenter:self.view.center];
+   
 }
 
-//ACCION BOTON ENVIAR POPUP
-- (IBAction)enviarInvitaciones:(id)sender {
-    
-    //habilitamos scroll y boton
-    [self.scroll setUserInteractionEnabled:YES];
-    [self.bCreate setEnabled:YES];
-    [self.bCancel setEnabled:YES];
-    //eliminamos el popup
-    [self.popup removeFromSuperview];
-}
+
 - (IBAction)seleccionarUsuario:(id)sender {
     
 }

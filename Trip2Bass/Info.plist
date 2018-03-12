@@ -39,11 +39,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string>NSLocationWhenInUseUsageDescription
-</string>
-	<key>CFBundleDisplayName</key>
-	<string>NSLocationWhenInUseUsageDescription
-</string>
 </dict>
 </plist>

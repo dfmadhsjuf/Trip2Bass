@@ -28,6 +28,10 @@
     //mostrar teclado
     [self.tfNombre resignFirstResponder];
     
+    //texto tipo contraseña
+    self.tfConfirmarPass.secureTextEntry = YES;
+    self.tfPass.secureTextEntry = YES;
+
   
 }
 

@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *parking;
 @property (weak, nonatomic) IBOutlet UIButton *ubicacion;
 @property (weak, nonatomic) IBOutlet UILabel *indicaciones;
-@property (weak, nonatomic) IBOutlet UILabel *labelContenidoEvento;
+
 
 //BOTONES
 @property (weak, nonatomic) IBOutlet UIButton *bComentar;
@@ -42,6 +42,20 @@
 
 //SCROLL
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
+//LABELS
+@property (strong, nonatomic) IBOutlet UILabel *labelInicio;
+@property (strong, nonatomic) IBOutlet UILabel *labelFin;
+@property (strong, nonatomic) IBOutlet UILabel *labelArea;
+@property (strong, nonatomic) IBOutlet UILabel *labelTipo;
+@property (strong, nonatomic) IBOutlet UILabel *labelOrganizador;
+@property (strong, nonatomic) IBOutlet UILabel *labelContenidoEvento;
+@property (strong, nonatomic) IBOutlet UILabel *labelAcceso;
+@property (strong, nonatomic) IBOutlet UILabel *labelParking;
+@property (strong, nonatomic) IBOutlet UILabel *labelTerreno;
+@property (strong, nonatomic) IBOutlet UILabel *labelUbicacion;
+@property (strong, nonatomic) IBOutlet UILabel *labelIndicaciones;
+@property (strong, nonatomic) IBOutlet UILabel *labelComentario;
 
 
 

@@ -35,9 +35,10 @@
     [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.tfFechaNac setInputView: datePicker];
     
-    //pickerview
-    
-    //[self.tfFechaNac resignFirstResponder];
+    self.tfConfirmarPass.secureTextEntry = YES;
+    self.tfPass.secureTextEntry = YES;
+
+
     
     //Para mostrar en la vista la informacion del usuario.
     [self muestraInfoUsuario];
@@ -147,6 +148,7 @@
         }
         [self.swCoche setUserInteractionEnabled:NO];
         [self.bSeleccionarImagen setUserInteractionEnabled:NO];
+        [self.bSeleccionarImagen setEnabled:NO];
         //cambiamos el boton a edit
         [self.bEdit setTitle:@"Edit"];
     }else {
@@ -154,14 +156,17 @@
         [self.bEdit setTitle:@"Save"];
         //activamos boton cambiar foto usuario
         [self.bSeleccionarImagen setUserInteractionEnabled:YES];
+        [self.bSeleccionarImagen setEnabled:YES];
         //activamos switch coche
-        [self.swCoche setUserInteractionEnabled:NO];
+        [self.swCoche setUserInteractionEnabled:YES];
         //permitimos la edicion y cambiamos el estilo a los textfield y el segmented control
         [self.swCoche setUserInteractionEnabled:YES];
         for (int i = 0; i < [losText count] ; i++) {
             [losText[i] setUserInteractionEnabled:YES];
             [[losText objectAtIndex:i] setBackgroundColor:[UIColor whiteColor]];
         }
+        
+
         
     }
     

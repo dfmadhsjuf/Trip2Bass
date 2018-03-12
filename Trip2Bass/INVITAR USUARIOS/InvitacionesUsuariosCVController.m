@@ -88,7 +88,7 @@ UIImageView* fotoUsuario;
     
     //hacer foto redonda
     fotoUsuario.layer.cornerRadius = fotoUsuario.frame.size.width /2;
-    
+    fotoUsuario.clipsToBounds =YES;
     
     return cell;
 }
