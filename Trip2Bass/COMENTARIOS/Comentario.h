@@ -10,6 +10,8 @@
 
 @interface Comentario : NSObject
 
+@property NSNumber* codigoEvento;
+@property NSNumber* codigoUsuario;
 @property NSString* usuario;
 @property NSString* tipo;
 @property NSString* contenido;

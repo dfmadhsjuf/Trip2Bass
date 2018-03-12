@@ -78,6 +78,7 @@ UILabel* fechaLabel;
         DetalleEventoViewController *detalle = [segue destinationViewController];
         NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
         Eventos * evento = [self.dataController.masterEventosList objectAtIndex:indexPath.row];
+        detalle.nicknameUsuario = self.username;
         detalle.evento = evento;
     }
     if ([[segue identifier] isEqualToString:@"crearEvento"]) {

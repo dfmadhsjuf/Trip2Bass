@@ -54,6 +54,16 @@
 }
 
 -(void) addComentario:(Comentario *)comentario{
+    
+    //Inicialiamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    
+    //Sacamos el id del usuario.
+    comentario.codigoUsuario = [db sacaIdUsuarioConNickname:comentario.usuario];
+    
+    //Insertamos el comentario en la BD.
+    [db creaComentario:comentario];
+    
     [self.masterComentariosList addObject: comentario];
 }
 @end

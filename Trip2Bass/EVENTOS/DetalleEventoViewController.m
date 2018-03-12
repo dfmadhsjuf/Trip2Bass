@@ -11,6 +11,7 @@
 #import "ComentariosCollectionVC.h"
 #import "Eventos.h"
 #import "MapsViewController.h"
+#import "ComentariosDataController.h"
 
 @interface DetalleEventoViewController ()
 
@@ -77,6 +78,10 @@
     [self.popup.layer setCornerRadius:5];
     [self.view addSubview:self.popup];
     [self.popup setCenter:self.view.center];
+    //Le pasamos el nickname del usuario logueado.
+    [self.usuarioComentario setText:self.nicknameUsuario];
+    //Inhabilitamos la edicion del campo.
+    [self.usuarioComentario setUserInteractionEnabled:false];
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         // animate it to the identity transform (100% scale)
         self.view.transform = CGAffineTransformIdentity;
@@ -86,8 +91,13 @@
 }
 //ENVIAR COMENTARIO EVENTO
 - (IBAction)enviar:(id)sender {
-    //codigo enviar comentario
-    self.comentario = [[Comentario alloc]initWithUsuario:self.usuario.text tipo:self.tipoComentario.text contenido:self.contenidoComentario.text];
+    //Creamos un nuevo comentario y se lo pasamos al comentarioDataController para que lo introduzca en la BD.
+    Comentario* nuevoComentario = [[Comentario alloc]initWithUsuario:self.usuarioComentario.text tipo:self.tipoComentario.text contenido:self.contenidoComentario.text];
+    nuevoComentario.codigoEvento = [self.evento codEvento];
+    //ComentariosCollectionVC* creaComentario = [[ComentariosCollectionVC alloc] init];
+    //[creaComentario addNuevoComentario:nuevoComentario];
+    ComentariosDataController* comentarioDataController = [[ComentariosDataController alloc] init];
+    [comentarioDataController addComentario:nuevoComentario];
     //deshabilitamos scroll y boton
     [self.scroll setUserInteractionEnabled:YES];
     //cerramos popup

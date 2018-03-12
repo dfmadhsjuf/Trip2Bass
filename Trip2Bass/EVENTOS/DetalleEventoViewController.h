@@ -14,6 +14,7 @@
 @interface DetalleEventoViewController : UIViewController
 
 @property Eventos* evento;
+@property NSString* nicknameUsuario;
 //DATOS EVENTO
 @property (weak, nonatomic) IBOutlet UIImageView *fotoEvento;
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
@@ -35,7 +36,7 @@
 
 //POPUP COMENTARIO
 @property (strong, nonatomic) IBOutlet UIView *popup;
-@property (strong, nonatomic) IBOutlet UITextField *usuario;
+@property (strong, nonatomic) IBOutlet UITextField *usuarioComentario;
 @property (strong, nonatomic) IBOutlet UITextField *tipoComentario;
 @property (strong, nonatomic) IBOutlet UITextView *contenidoComentario;
 @property Comentario* comentario;
@@ -56,6 +57,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelUbicacion;
 @property (strong, nonatomic) IBOutlet UILabel *labelIndicaciones;
 @property (strong, nonatomic) IBOutlet UILabel *labelComentario;
+
+
 
 
 

@@ -1700,7 +1700,7 @@
                         <outlet property="accesibilidad" destination="xuv-lR-1Ut" id="m8I-H2-a35"/>
                         <outlet property="area" destination="7wn-du-u9E" id="5RY-91-g0m"/>
                         <outlet property="bComentar" destination="IRG-0b-haT" id="xvh-Em-fTx"/>
-                        <outlet property="contenidoComentario" destination="ulu-Sa-5Rz" id="mby-6a-gkS"/>
+                        <outlet property="contenidoComentario" destination="ulu-Sa-5Rz" id="CaP-Uw-TTz"/>
                         <outlet property="contenidoEvento" destination="smQ-5i-UnK" id="UOj-bs-rdb"/>
                         <outlet property="fin" destination="Kjr-mH-aw1" id="CgW-Yw-M2K"/>
                         <outlet property="fotoEvento" destination="Fv3-EF-Mlg" id="IHS-av-Skv"/>
@@ -1724,10 +1724,10 @@
                         <outlet property="scroll" destination="xbT-4m-aP1" id="T41-e1-QrF"/>
                         <outlet property="terreno" destination="vrW-yX-xHT" id="z6j-Al-FqR"/>
                         <outlet property="tipo" destination="jdl-qS-DYP" id="Cn8-ET-ba5"/>
-                        <outlet property="tipoComentario" destination="Chw-e3-2qD" id="zkf-pK-Gfi"/>
+                        <outlet property="tipoComentario" destination="Chw-e3-2qD" id="ylS-t3-k02"/>
                         <outlet property="titulo" destination="Ib8-Sb-zBR" id="1ee-Rq-Obp"/>
                         <outlet property="ubicacion" destination="6wf-GW-Jai" id="8bp-Wb-Rvg"/>
-                        <outlet property="usuario" destination="73T-fg-tar" id="HUi-7K-T7L"/>
+                        <outlet property="usuarioComentario" destination="73T-fg-tar" id="HFX-zs-UbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltr-I5-ULH" userLabel="First Responder" sceneMemberID="firstResponder"/>

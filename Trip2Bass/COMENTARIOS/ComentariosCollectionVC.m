@@ -91,6 +91,7 @@ UILabel* contenido;
 }
 
 -(void)addNuevoComentario:(Comentario*)nuevo{
+    
     [self.dataController addComentario:nuevo];
 }
 

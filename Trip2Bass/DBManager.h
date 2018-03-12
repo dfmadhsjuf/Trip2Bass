@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 @class Eventos;
+@class Comentario;
 
 
 @interface DBManager : NSObject
@@ -35,5 +36,7 @@
 -(BOOL) compruebaOrganizadorConNickname:(NSString*)nickname;
 -(NSMutableArray*) getUsuarios;
 -(NSArray*) getInfoOrganizadoresConNickname:(NSString*) nickname;
+-(NSNumber*) sacaIdUsuarioConNickname:(NSString*) nickname;
+-(void) creaComentario:(Comentario*) comentario;
 
 @end

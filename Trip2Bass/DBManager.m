@@ -679,4 +679,99 @@
     return infoOrganizador;
 }
 
+//Metodo que saca el cod_usuario del usuario con cierto nickname.
+-(NSNumber*) sacaIdUsuarioConNickname:(NSString*) nickname{
+    NSNumber* cod_usuario;
+    
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"SELECT cod_usuario FROM USUARIOS WHERE nickname = \"%@\";", nickname];
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de sacaIDUsuarior: %s", sqlite3_errmsg(db));
+        }else{
+            //Si la consulta se ha ejecuta bien pues sacamos los datos y los cargamos en el Array de la info del organizador.
+            //Nos movemos hasta la primera fila del statement.
+            if(sqlite3_step(statement) == SQLITE_ROW){
+                
+                cod_usuario = [NSNumber numberWithInt:sqlite3_column_int(statement, 0)];
+                
+            }
+            
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
+    
+    return cod_usuario;
+}
+
+//Metodo que crea un comentario echo por un usuario en un evento especifico.
+-(void) creaComentario:(Comentario*) comentario{
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"INSERT INTO COMENTARIOS (\"cod_evento\", \"cod_usuario\", \"tipo\", \"comentario\") VALUES (\"%@\", \"%@\", \"%@\", \"%@\")",
+                                  comentario.codigoEvento,
+                                  comentario.codigoUsuario,
+                                  comentario.tipo,
+                                  comentario.contenido];
+        
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de crearComentario: %s", sqlite3_errmsg(db));
+        }else{
+            //Comprobamos si se ha ejecutado bien la inserccion del comentario.
+            if(sqlite3_step(statement) != SQLITE_DONE){
+                NSLog(@"DB Error: %s", sqlite3_errmsg(db));
+                //Quitamos el statement de memoria.
+                sqlite3_finalize(statement);
+                //Cerramos la conexion con la BD.
+                sqlite3_close(db);
+            } else{
+                //Si se ha ejecutado bien guardamos la fila afectada y el ID del ultimo usuario insertado.
+                self.affectedRows = sqlite3_changes(db);
+                self.lastInsertedRowID = sqlite3_last_insert_rowid(db);
+            }
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
+    
+}
+
 @end
