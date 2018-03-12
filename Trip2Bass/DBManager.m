@@ -317,4 +317,56 @@
     return infoUsuario;
 }
 
+//Metodo que muestra la info del coche del usuario.
+-(NSArray*) getInfoCoche:(NSNumber*)codUsuario{
+    //Nos creamos un Array para almacenar la info del coche.
+    NSArray* infoCoche;
+    
+    //Creamos el objeto sqlite.
+    sqlite3* db;
+    
+    //Creamos la ruta hasta la BD.
+    NSString* databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    
+    //Abrimos la conexion con la BD.
+    if(sqlite3_open([databasePath UTF8String], &db) != SQLITE_OK){
+        //Si no se puede abrir muestra el mensaje de error.
+        NSLog(@"No se puede abrir la BD: %s", sqlite3_errmsg(db));
+    }else{
+        //Si se ha podido abrir la conexion empezamos.
+        //Creamos la consulta SQL.
+        NSString* sentenciaSQL = [NSString stringWithFormat:@"SELECT * FROM COCHES WHERE cod_usuario = \"%@\";", codUsuario];
+        //Creamos el statement.
+        sqlite3_stmt* statement;
+        
+        //Realizamos la consulta.
+        if(sqlite3_prepare_v2(db, [sentenciaSQL UTF8String], -1, &statement, NULL) != SQLITE_OK){
+            NSLog(@"Problema al preparar el statement de mostrarEventos: %s", sqlite3_errmsg(db));
+        }else{
+            //Si la consulta se ha ejecuta bien pues sacamos los datos y los cargamos en el Array de la info del usuario.
+            //Nos movemos hasta la primera fila del statement.
+            if(sqlite3_step(statement) == SQLITE_ROW){
+                
+                NSString* marca = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 2)];
+                NSString* modelo = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 3)];
+                NSString* plazas = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 4)];
+                NSString* color = [NSString stringWithUTF8String:(char*) sqlite3_column_text(statement, 5)];
+                
+                //Metemos los datos del usuario en el Array.
+                infoCoche = [[NSArray alloc] initWithObjects: marca, modelo, plazas, color, nil];
+            }
+            
+        }
+        
+        //Quitamos el statement de memoria.
+        sqlite3_finalize(statement);
+    }
+    
+    //Cerramos la conexion con la BD.
+    sqlite3_close(db);
+    
+    //Devolvemos la info del coche.
+    return infoCoche;
+}
+
 @end
