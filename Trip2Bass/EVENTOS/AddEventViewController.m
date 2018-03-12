@@ -10,7 +10,12 @@
 #import "DBManager.h"
 #import "Eventos.h"
 
-@interface AddEventViewController ()
+@interface AddEventViewController (){
+    //Nos creamos un Array para almacenar la info del grupo de organizadores al que pertenece el usuario.
+    NSArray* infoOrganizador;
+}
+    //Una propiedad para almacenar el nickname del usuario.
+    @property NSString* nicknameUsuario;
 
 @end
 
@@ -20,7 +25,23 @@
     [super viewDidLoad];
     [self eligeImagenEvento];
     [self setEstilo];
-    // Do any additional setup after loading the view.
+    
+    //Inicialiamos la BD.
+    DBManager* db = [[DBManager alloc] initWithDatabaseFilename:@"Trip2Bass.sqlite"];
+    
+    //Recogemos los datos del organizador de la BD.
+    infoOrganizador = [db getInfoOrganizadoresConNickname:self.nicknameUsuario];
+    
+    //Ponemos el nombre del organizador el en TextField.
+    self.tfOrganizador.text = [infoOrganizador objectAtIndex:1];
+    //Deshabilitamos que el usuario pueda modificar este valor.
+    [self.tfOrganizador setUserInteractionEnabled:false];
+    
+}
+
+//Metodo que inserta el valor del nickname del usuario.
+-(void) setNickname:(NSString*) nicknameUsuario{
+    self.nicknameUsuario = nicknameUsuario;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -136,8 +157,8 @@
     
     NSString* indicaciones = self.tfIndicaciones.text;
 
-    //Nos creamos un evento con los datos de la vista.
-    Eventos* evento = [[Eventos alloc] initWhitTitulo:titulo conArea:area conFechaInicio:fechaInicio conFechaFin:fechaFin conTipo:tipo conDescripcion:descripcion conMusica:musica conParkingTamano:parkingTamaño conParkingAccesibilidad:parkingAccesibilidad conParkingTerreno:parkingTerreno conUbicacion:ubicacion conIndicaciones:indicaciones yFoto:foto];
+    //Nos creamos un evento con los datos de la vista y el codigo del organizador al que pertenece el usuario logueado.
+    Eventos* evento = [[Eventos alloc] initWhitTitulo:titulo conArea:area conFechaInicio:fechaInicio conFechaFin:fechaFin conTipo:tipo conDescripcion:descripcion conMusica:musica conParkingTamano:parkingTamaño conParkingAccesibilidad:parkingAccesibilidad conParkingTerreno:parkingTerreno conUbicacion:ubicacion conIndicaciones:indicaciones conCodigoOrganizador:[infoOrganizador objectAtIndex:0] yFoto:foto];
     
     //Llamamos al metodo para meter el Evento en la BD.
     [db insertaEvento:evento];

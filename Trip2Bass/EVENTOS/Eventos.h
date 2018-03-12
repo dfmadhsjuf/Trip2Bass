@@ -18,6 +18,7 @@
 @property NSString* fechaFin; //SERA NSSTRING SOLO PARA PRUEBAS (NSDATE)
 @property NSString* tipo;
 @property NSString* organizador;
+@property NSNumber* codOrganizador;
 @property NSString* descripcion;
 @property NSString* musica;
 @property NSString* parkingTamano;
@@ -27,6 +28,6 @@
 @property NSString* indicaciones;
 @property NSString* foto;
 
--(id) initWhitTitulo:(NSString*)titulo conArea:(NSString*)area conFechaInicio:(NSString*)fechaInicio conFechaFin:(NSString*)fechaFin conTipo:(NSString*)tipo conDescripcion:(NSString*)descripcion conMusica:(NSString*)musica conParkingTamano:(NSString*)parkingTamano conParkingAccesibilidad:(NSString*)parkingAccesibilidad conParkingTerreno:(NSString*)parkingTerreno conUbicacion:(NSString*)ubicacion conIndicaciones:(NSString*)indicaciones yFoto:(NSString*)foto;
+-(id) initWhitTitulo:(NSString*)titulo conArea:(NSString*)area conFechaInicio:(NSString*)fechaInicio conFechaFin:(NSString*)fechaFin conTipo:(NSString*)tipo conDescripcion:(NSString*)descripcion conMusica:(NSString*)musica conParkingTamano:(NSString*)parkingTamano conParkingAccesibilidad:(NSString*)parkingAccesibilidad conParkingTerreno:(NSString*)parkingTerreno conUbicacion:(NSString*)ubicacion conIndicaciones:(NSString*)indicaciones conCodigoOrganizador:(NSNumber*)codOrganizador yFoto:(NSString*)foto;
 
 @end

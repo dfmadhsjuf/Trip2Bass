@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AddEventViewController : UIViewController
-//PROPIEDADES EVENTO NUEVO
 
+//PROPIEDADES EVENTO NUEVO
 @property (weak, nonatomic) IBOutlet UIImageView *iFotoEvento;
 @property (weak, nonatomic) IBOutlet UITextField *tfTituloEvento;
 @property (weak, nonatomic) IBOutlet UITextField *tfOrganizador;
@@ -41,4 +41,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
+-(void) setNickname:(NSString*) nicknameUsuario;
+
 @end

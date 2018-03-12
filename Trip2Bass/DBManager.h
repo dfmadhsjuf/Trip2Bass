@@ -34,5 +34,6 @@
 -(NSMutableArray*) getComentariosEvento:(NSNumber*) codEvento;
 -(BOOL) compruebaOrganizadorConNickname:(NSString*)nickname;
 -(NSMutableArray*) getUsuarios;
+-(NSArray*) getInfoOrganizadoresConNickname:(NSString*) nickname;
 
 @end

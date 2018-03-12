@@ -10,6 +10,7 @@
 #import "Eventos.h"
 #import "EventosDataController.h"
 #import "DetalleEventoViewController.h"
+#import "AddEventViewController.h"
 #import "DBManager.h"
 
 @interface EventosCollectionVC ()
@@ -74,11 +75,16 @@ UILabel* fechaLabel;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"pasaDatosEvento"]) {
-        
         DetalleEventoViewController *detalle = [segue destinationViewController];
         NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
         Eventos * evento = [self.dataController.masterEventosList objectAtIndex:indexPath.row];
         detalle.evento = evento;
+    }
+    if ([[segue identifier] isEqualToString:@"crearEvento"]) {
+        //Esto se hace de esta manera porque sino daba error.
+        UINavigationController* navController = (UINavigationController*)[segue destinationViewController];
+        AddEventViewController* crearEvento = [navController topViewController];
+        [crearEvento setNickname:self.username];
     }
 }
 

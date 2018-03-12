@@ -683,7 +683,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="alm-qX-Wpd">
                             <color key="tintColor" red="0.60946409312279992" green="0.86743617374005311" blue="0.15739546565125648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="MUb-eT-dR0" kind="show" id="gw5-vZ-twd"/>
+                                <segue destination="MUb-eT-dR0" kind="show" identifier="crearEvento" id="gw5-vZ-twd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
