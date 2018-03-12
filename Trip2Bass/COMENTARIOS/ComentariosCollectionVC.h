@@ -12,6 +12,7 @@
 
 @interface ComentariosCollectionVC : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (strong, nonatomic) ComentariosDataController* dataController;
+@property NSNumber* codigoEvento;
 
 -(void)addNuevoComentario:(Comentario*)nuevo;
 -(void)refreshData;
